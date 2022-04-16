@@ -1,9 +1,13 @@
 import Layout from "./hoc/Layout/Layout";
+import ErrorBoundary from './ErrorBoundary/ErrorBoundary'
+import Header from "./containers/Header/Header";
 
 function App() {
   return (
       <Layout>
-          <h1>Hello, World!</h1>
+          <ErrorBoundary>
+            <Header/>
+          </ErrorBoundary>
       </Layout>
   );
 }

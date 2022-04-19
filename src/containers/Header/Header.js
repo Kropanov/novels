@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import classes from './Header.module.scss'
+import Logo from "../../components/Logo/Logo";
 
 class Header extends Component {
     constructor(props) {
@@ -13,7 +14,7 @@ class Header extends Component {
     render() {
         return (
             <header className={classes.Header}>
-            
+                <Logo />
             </header>
         )
     }

@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 
 const Navigation = () => {
     return (
-        <nav>
+        <nav className={classes.Navigation}>
             <Link to="/">Главная</Link>
             <Link to="/novels">Новеллы</Link>
             <Link to="/manga">Манга</Link>

@@ -1,0 +1,41 @@
+$main-color1: #fd7e14;
+$main-color2: #ffffff;
+
+.Novel {
+    border: 2px solid $main-color1;
+    font-size: 20px;
+    color: $main-color2;
+    margin: 10px 10px;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    .Title {
+        display: flex;
+        flex-flow: column wrap;
+        padding: 10px;
+    }
+}
+
+.Image {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.Name {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    margin-top: -10px;
+    &:hover {
+        color: $main-color1;
+        cursor: pointer;
+    }
+}
+
+.Author {
+    font-size: .8em;
+    &:hover {
+        color: $main-color1;
+        cursor: pointer;
+    }
+}
+

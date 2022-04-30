@@ -2,7 +2,6 @@ import React from "react"
 import classes from "./Navigation.module.scss"
 import {Link} from "react-router-dom";
 
-
 const Navigation = () => {
     return (
         <nav className={classes.Navigation}>

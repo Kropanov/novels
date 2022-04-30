@@ -1,5 +1,21 @@
-.Navigation {
+$main-color1: #fd7e14;
 
+
+.Navigation {
+    a {
+        font-size: 18px;
+        color: white;
+        text-decoration: none;
+    }
+    a:visited {
+        color: white;
+    }
+    a:active {
+        color: white;
+    }
+    a:hover {
+        color: $main-color1;
+    }
 }
 
 nav {
@@ -7,6 +23,6 @@ nav {
     display: flex;
     justify-content: flex-end;
     a {
-        margin-right: 30px;
+        margin-right: 60px;
     }
 }

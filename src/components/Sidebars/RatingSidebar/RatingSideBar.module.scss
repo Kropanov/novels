@@ -1,0 +1,56 @@
+$main-color1: #fd7e14;
+$main-color2: #ffffff;
+$background-color-black1: #212529;
+
+.RatingSideBar {
+    background: $background-color-black1;
+    margin: 20px;
+    padding: 10px 20px 20px 20px;
+    border-radius: 5px;
+}
+
+.Title {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 15px;
+    justify-content: space-around;
+}
+
+.itemRatingSideBar {
+    display: flex;
+    flex-flow: row wrap;
+    color: $main-color2;
+    font-size: 16px;
+    flex-grow: 1;
+    //border-bottom: 1px solid #101214;
+    border-bottom: 1px solid #fff;
+}
+
+
+.Image {
+    margin: 10px;
+    border-radius: 50%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.Name {
+    &:hover {
+        color: $main-color1;
+        cursor: pointer;
+    }
+}
+
+.Author {
+    &:hover {
+        color: $main-color1;
+        cursor: pointer;
+    }
+}
+
+.Rating {
+    &:hover {
+        color: $main-color1;
+        cursor: pointer;
+    }
+}

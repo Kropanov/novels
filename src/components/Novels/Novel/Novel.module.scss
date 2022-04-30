@@ -3,12 +3,16 @@ $main-color2: #ffffff;
 
 .Novel {
     border: 2px solid $main-color1;
+    //box-shadow: 0 0 3px 3px #545557;
     font-size: 20px;
     color: $main-color2;
-    margin: 10px 10px;
+    margin: 20px 20px;
     border-radius: 10px;
     padding: 10px;
     display: flex;
+    &:hover {
+        box-shadow: 0 0 5px 5px #545557;
+    }
     .Title {
         display: flex;
         flex-flow: column wrap;

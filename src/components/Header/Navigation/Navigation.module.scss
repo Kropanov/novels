@@ -6,6 +6,8 @@ $main-color1: #fd7e14;
         font-size: 18px;
         color: white;
         text-decoration: none;
+        padding: 10px;
+        transition: all .33s ease-in-out;
     }
     a:visited {
         color: white;
@@ -15,6 +17,8 @@ $main-color1: #fd7e14;
     }
     a:hover {
         color: $main-color1;
+        background: rgba(159, 160, 162, 0.07);
+        border-radius: 10px;
     }
 }
 

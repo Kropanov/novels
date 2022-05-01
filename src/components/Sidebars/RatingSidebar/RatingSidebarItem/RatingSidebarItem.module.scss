@@ -1,0 +1,62 @@
+$main-color1: #fd7e14;
+$main-color2: #ffffff;
+$main-color-gold: #ffc107;
+$background-color-black1: #212529;
+
+
+.Title {
+    display: flex;
+    flex-flow: column wrap;
+    padding-left: 15px;
+}
+
+.itemRatingSideBar {
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    color: $main-color2;
+    font-size: 16px;
+    flex-grow: 1;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.88);
+    //border-bottom: 1px solid #1c1f23;
+}
+
+
+.Image {
+    margin: 10px;
+    border-radius: 50%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.Name {
+    &:hover {
+        color: $main-color1;
+        cursor: pointer;
+    }
+}
+
+.Author {
+    &:hover {
+        color: $main-color1;
+        cursor: pointer;
+    }
+}
+
+.Rating {
+    &:hover {
+        color: $main-color1;
+        cursor: pointer;
+    }
+}
+
+.RatingNumber {
+    color: $main-color-gold;
+    font-size: 2em;
+    padding: 10px;
+}
+
+div {
+    transition: all .33s ease-in-out;
+}

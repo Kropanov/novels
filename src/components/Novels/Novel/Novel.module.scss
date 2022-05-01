@@ -10,6 +10,7 @@ $main-color2: #ffffff;
     border-radius: 10px;
     padding: 10px;
     display: flex;
+    transition: box-shadow .2s ease-in;
     &:hover {
         box-shadow: 0 0 5px 5px #545557;
     }
@@ -29,6 +30,7 @@ $main-color2: #ffffff;
     font-size: 1.3em;
     margin-bottom: 10px;
     margin-top: -10px;
+    transition: color .33s ease-in-out;
     &:hover {
         color: $main-color1;
         cursor: pointer;
@@ -37,6 +39,7 @@ $main-color2: #ffffff;
 
 .Author {
     font-size: .8em;
+    transition: color .33s ease-in-out;
     &:hover {
         color: $main-color1;
         cursor: pointer;

@@ -1,15 +1,15 @@
 import React from "react"
 import classes from "./Navigation.module.scss"
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 const Navigation = () => {
     return (
         <nav className={classes.Navigation}>
-            <Link to="/">Главная</Link>
-            <Link to="/novels">Новеллы</Link>
-            <Link to="/manga">Манга</Link>
-            <Link to="/blog">Блог</Link>
-            <Link to="/users">Вход</Link>
+            <NavLink to="/">Главная</NavLink>
+            <NavLink to="/novels">Новеллы</NavLink>
+            <NavLink to="/manga">Манга</NavLink>
+            <NavLink to="/blog">Блог</NavLink>
+            <NavLink to="/users">Вход</NavLink>
         </nav>
     )
 }

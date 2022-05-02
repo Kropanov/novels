@@ -10,7 +10,7 @@ const RatingSidebar = props => {
     let count = 1
     
     return (
-        <div className={classes.RatingSideBar}>
+        <aside className={classes.RatingSideBar}>
             { props.novels.map( (novel, index) => {
                 return (
                     <RatingSidebarItem
@@ -23,7 +23,7 @@ const RatingSidebar = props => {
                     />
                 )
             })}
-        </div>
+        </aside>
     )
 }
 

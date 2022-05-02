@@ -1,12 +1,15 @@
 import React from "react"
 import classes from './Logo.module.scss'
+import { NavLink } from "react-router-dom"
 
 
 const Logo = () => {
     return(
-        <div className={classes.Logo}>
-            Novels
-        </div>
+        <NavLink to='/'>
+            <div className={classes.Logo}>
+                Novels
+            </div>
+        </NavLink>
     )
 }
 

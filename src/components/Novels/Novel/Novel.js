@@ -12,6 +12,10 @@ const Novel = props => {
                 <div className={classes.Author}>
                     Автор: { props.author }
                 </div>
+                <div className={classes.Description}>
+                    {/*<span>Описание:</span>*/}
+                    { props.description }
+                </div>
             </div>
         </div>
     )

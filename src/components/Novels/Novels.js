@@ -12,6 +12,7 @@ const Novels = props => {
                         key={index}
                         name={novel.name}
                         author={novel.author}
+                        description={novel.description}
                     />
                 )
             })

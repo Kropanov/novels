@@ -1,7 +1,9 @@
+$header-color-black: #1c1f23;
+
 .Header {
     height: 60px;
     width: auto;
-    background: #1c1f23;
+    background: $header-color-black;
     display: flex;
     align-items: center;
 }

@@ -1,5 +1,8 @@
 $main-color1: #fd7e14;
 $footer-color-black: #1c1f23;
+$footer-color-hover: rgba(159, 160, 162, 0.07);
+$main-color2: rgba(255, 255, 255, 0.8);
+
 
 .Footer {
     background: $footer-color-black;
@@ -9,7 +12,24 @@ $footer-color-black: #1c1f23;
 
 footer {
     margin-top: auto;
-    color: white;
+    color: $main-color2;
+    a {
+        color: $main-color2;
+        text-decoration: none;
+        //transition: all .33s ease-in-out;
+    }
+    a:visited {
+        color: $main-color2;
+    }
+    a:active {
+        color: $main-color2;
+    }
+    li:hover {
+        border-radius: 5px;
+        color: $main-color1;
+        padding: 5px;
+        background: $footer-color-hover;
+    }
 }
 
 ul {
@@ -17,8 +37,19 @@ ul {
     border-bottom: 1px solid rgba(73, 73, 73, 0.7);
     padding: 10px;
     span {
+        border-radius: 3px;
+        padding: 2px;
         font-size: 20px;
+        color: black;
         background: $main-color1;
+        text-align: center;
+    }
+    li {
+        cursor: pointer;
+        transition: all .12s ease-in-out;
+    }
+    li:hover {
+        color: $main-color1;
     }
 }
 

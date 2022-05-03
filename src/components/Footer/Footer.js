@@ -1,28 +1,33 @@
 import React from "react"
 import classes from './Footer.module.scss'
+import {Link} from "react-router-dom";
 
-const Footer = props => {
+function funcAgeAlert() {
+    alert('Сайт 18+')
+}
+
+const Footer = () => {
     return (
         <footer className={classes.Footer}>
-            <div class="container-fluid !direction !spacing">
-                <div class="row">
-                    <div class="col-3">
+            <div className="container-fluid !direction !spacing">
+                <div className="row">
+                    <div className="col-xl-3 col-md-6 col-sm-12">
                         <ul>
                             <span>Novels</span>
-                            <li>Сайт может содержать материалы, не предназначенные для просмотра лицами, не достигшими 18 лет!</li>
-                            <li>— Используя данный сайт, вы подтверждаете, что вам уже исполнилось 18 лет.</li>
+                            <li onClick={funcAgeAlert}>— Сайт может содержать материалы, не предназначенные для просмотра лицами, не достигшими 18 лет!</li>
+                            <li onClick={funcAgeAlert}>— Используя данный сайт, вы подтверждаете, что вам уже исполнилось 18 лет.</li>
                         </ul>
                     </div>
-                    <div class="col-3">
+                    <div className="col-xl-3 col-md-6 col-sm-12">
                         <ul>
                             <span>Ссылки</span>
-                            <li>Главная</li>
-                            <li>Новеллы</li>
-                            <li>Манга</li>
-                            <li>Блог</li>
+                            <Link to='/'><li>Главная</li></Link>
+                            <Link to='/novels'><li>Новеллы</li></Link>
+                            <Link to='/manga'><li>Манга</li></Link>
+                            <Link to='/blog'><li>Блог</li></Link>
                         </ul>
                     </div>
-                    <div class="col-3 ">
+                    <div className="col-xl-3 col-md-6 col-sm-12">
                         <ul>
                             <span>Помощь</span>
                             <li>FAQ</li>
@@ -30,7 +35,7 @@ const Footer = props => {
                             <li>Правила</li>
                         </ul>
                     </div>
-                    <div class="col-3 ">
+                    <div className="col-xl-3 col-md-6 col-sm-12">
                         <ul>
                             <span>Контакты</span>
                             <li>Для правообладателей</li>

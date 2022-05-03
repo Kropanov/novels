@@ -1,11 +1,12 @@
 $main-color1: #fd7e14;
-$main-color2: #ffffff;
+$main-color2: rgba(255, 255, 255, 0.8);
+$text-color-novels: #AAAAAA;
 
 .Novel {
     border: 2px solid $main-color1;
     //box-shadow: 0 0 3px 3px #545557;
     font-size: 20px;
-    color: $main-color2;
+    color: $text-color-novels;
     margin: 20px 20px;
     border-radius: 10px;
     padding: 10px;
@@ -29,6 +30,7 @@ $main-color2: #ffffff;
 .Name {
     font-size: 1.3em;
     margin-bottom: 10px;
+    color: $main-color2;
     margin-top: -10px;
     transition: color .33s ease-in-out;
     &:hover {

@@ -1,11 +1,28 @@
-$header-color-black: #1c1f23;
+$main-color1: #fd7e14;
+$footer-color-black: #1c1f23;
 
 .Footer {
-    background: #1c1f23;
+    background: $footer-color-black;
     width: auto;
-    height: 100px;
+    padding: 20px;
 }
 
 footer {
     margin-top: auto;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    border-bottom: 1px solid rgba(73, 73, 73, 0.7);
+    padding: 10px;
+    span {
+        font-size: 20px;
+        background: $main-color1;
+    }
+}
+
+div.row div {
+    display: flex;
+    align-items: center;
 }

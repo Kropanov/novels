@@ -11,7 +11,7 @@ $text-color-novels: #AAAAAA;
     border-radius: 10px;
     padding: 10px;
     display: flex;
-    transition: box-shadow .2s ease-in;
+    transition: box-shadow .13s ease-in;
     &:hover {
         box-shadow: 0 0 5px 5px #545557;
     }
@@ -32,7 +32,7 @@ $text-color-novels: #AAAAAA;
     margin-bottom: 10px;
     color: $main-color2;
     margin-top: -10px;
-    transition: color .33s ease-in-out;
+    transition: color .22s ease-in-out;
     &:hover {
         color: $main-color1;
         cursor: pointer;
@@ -41,7 +41,7 @@ $text-color-novels: #AAAAAA;
 
 .Author {
     font-size: .8em;
-    transition: color .33s ease-in-out;
+    transition: color .22s ease-in-out;
     &:hover {
         color: $main-color1;
         cursor: pointer;

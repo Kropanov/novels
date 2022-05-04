@@ -2,13 +2,14 @@ $main-color1: #fd7e14;
 $main-color2: rgba(255, 255, 255, 0.8);
 $main-color-gold: #ffc107;
 $background-color-black1: #212529;
+$border-color-grey: rgb(74, 87, 94);
 
 
 .Title {
     display: flex;
     flex-flow: column wrap;
     padding-left: 15px;
-    width: 210px;
+    width: 170px;
 }
 
 .itemRatingSideBar {
@@ -18,9 +19,14 @@ $background-color-black1: #212529;
     color: $main-color2;
     font-size: 16px;
     align-items: center;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.88);
+    border: 1px solid $border-color-grey;
+    border-radius: 10px;
     justify-content: space-around;
     //border-bottom: 1px solid #1c1f23;
+    margin-bottom: 15px;
+    &:hover {
+        box-shadow: 0 0 5px 2px #545557;
+    }
 }
 
 .Image {
@@ -58,7 +64,7 @@ $background-color-black1: #212529;
 }
 
 div {
-    transition: all .33s ease-in-out;
+    transition: all .22s ease-in-out;
     .Gold {
         color: $main-color-gold;
     }

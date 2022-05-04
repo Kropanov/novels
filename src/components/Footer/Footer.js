@@ -2,10 +2,6 @@ import React from "react"
 import classes from './Footer.module.scss'
 import {Link} from "react-router-dom";
 
-function funcAgeAlert() {
-    alert('Сайт 18+')
-}
-
 const Footer = () => {
     return (
         <footer className={classes.Footer}>
@@ -14,8 +10,8 @@ const Footer = () => {
                     <div className="col-xl-3 col-md-6 col-sm-12">
                         <ul>
                             <span>Novels</span>
-                            <li onClick={funcAgeAlert}>— Сайт может содержать материалы, не предназначенные для просмотра лицами, не достигшими 18 лет!</li>
-                            <li onClick={funcAgeAlert}>— Используя данный сайт, вы подтверждаете, что вам уже исполнилось 18 лет.</li>
+                            <div>— Сайт может содержать материалы, не предназначенные для просмотра лицами, не достигшими 18 лет!</div>
+                            <div>— Используя данный сайт, вы подтверждаете, что вам уже исполнилось 18 лет.</div>
                         </ul>
                     </div>
                     <div className="col-xl-3 col-md-6 col-sm-12">

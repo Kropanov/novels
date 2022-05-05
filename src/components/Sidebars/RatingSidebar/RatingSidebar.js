@@ -5,6 +5,7 @@ import RatingSidebarItem from './RatingSidebarItem/RatingSidebarItem'
 const RatingSidebar = props => {
     
     // massive obj was sorted
+    // TODO mutation in array
     props.novels.sort((prev, next) => next.rating - prev.rating)
     
     let count = 1

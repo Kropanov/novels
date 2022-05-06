@@ -1,37 +1,32 @@
 import React from "react";
-import { useParams, Link } from 'react-router-dom'
-import classes from './NovelPage.module.scss'
+import { useParams } from 'react-router-dom'
 import NovelPageTitle from './NovelPageTitle/NovelPageTitle'
+import Auxiliary from "../../hoc/Auxiliary/Auxiliary";
 
 const NovelPage = props => {
     
     const {name} = useParams();
     
-    const cls = [
-        classes.NovelPage,
-        "container-fluid",
-    ]
-    
     return (
-        <div className={cls.join(" ")}>
-            { props.novels.map((novel) => {
+        <Auxiliary>
+            { props.novels.map((novel, index) => {
                 return ( name === novel.name ?
                         <NovelPageTitle
-                            key={novel.id}
+                            key={index}
                             image={novel.image}
                             name={novel.name}
                             author={novel.author}
                             description={novel.description}
                             rating={novel.rating}
                             views={novel.views}
-                            like={novel.like}
-                            dislike={novel.dislike}
+                            likes={novel.likes}
+                            dislikes={novel.dislikes}
+                            novels={props.novels}
                         />
                         : null
                 )
             })}
-            <Link to="/">Назад</Link>
-        </div>
+        </Auxiliary>
     )
 }
 

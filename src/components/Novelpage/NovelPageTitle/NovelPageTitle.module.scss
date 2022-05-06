@@ -1,0 +1,59 @@
+ $font-color-dark-theme: #AAAAAA;
+ $main-color1: #fd7e14;
+
+ .colMain {
+     padding: 50px;
+     display: flex;
+     flex-flow: row wrap;
+     color: $font-color-dark-theme;
+     font-size: 17px;
+ }
+
+ .MainInfo {
+     display: flex;
+     flex-flow: column wrap;
+ }
+
+ .Description {
+     display: flex;
+     font-size: 18px;
+     flex-flow: wrap;
+     max-width: 100vh;
+ }
+ 
+ .Name {
+     font-size: 2em;
+     margin-bottom: 5px;
+     color: $main-color1;
+ }
+ 
+ .Image {
+     margin: 0 15px 15px 0;
+     box-sizing: border-box;
+     display: flex;
+     flex-flow: column nowrap;
+ }
+ 
+ .Author {
+     font-size: 17px;
+     margin-bottom: 5px;
+ }
+ 
+ .Feedback {
+     margin-bottom: 10px;
+ }
+ 
+ .Btn {
+     font-size: 18px;
+     margin-top: 6px;
+     padding: 8px;
+     background: #363c42;
+     border: 1px solid $main-color1;
+     border-radius: 6px;
+     color: rgba(255, 255, 255, 0.8);
+     transition: all 0.21s ease-in;
+     &:hover {
+         background: $main-color1;
+         color: black;
+     }
+ }

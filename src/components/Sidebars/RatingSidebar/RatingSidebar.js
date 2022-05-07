@@ -4,15 +4,15 @@ import RatingSidebarItem from './RatingSidebarItem/RatingSidebarItem'
 
 const RatingSidebar = props => {
     
+    const novels = [...props.novels]
     // massive obj was sorted
-    // TODO mutation in array
-    props.novels.sort((prev, next) => next.rating - prev.rating)
+    novels.sort((prev, next) => next.rating - prev.rating)
     
     let count = 1
     
     return (
         <aside className={classes.RatingSideBar}>
-            { props.novels.map( (novel, index) => {
+            { novels.map( (novel, index) => {
                 return (
                     <RatingSidebarItem
                         key={index}

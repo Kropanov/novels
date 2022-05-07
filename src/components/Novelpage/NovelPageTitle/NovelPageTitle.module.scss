@@ -1,5 +1,6 @@
  $font-color-dark-theme: #AAAAAA;
  $main-color1: #fd7e14;
+ $main-color2: rgba(255, 255, 255, 0.8);
 
  .colMain {
      padding: 50px;
@@ -37,6 +38,7 @@
  .Author {
      font-size: 17px;
      margin-bottom: 5px;
+     color: $main-color2;
  }
  
  .Feedback {
@@ -50,7 +52,7 @@
      background: #363c42;
      border: 1px solid $main-color1;
      border-radius: 6px;
-     color: rgba(255, 255, 255, 0.8);
+     color: $main-color2;
      transition: all 0.21s ease-in;
      &:hover {
          background: $main-color1;

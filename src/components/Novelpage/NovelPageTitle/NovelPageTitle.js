@@ -5,10 +5,12 @@ import RatingSidebar from "../../Sidebars/RatingSidebar/RatingSidebar";
 const NovelPageTitle = props => {
     
     const cls = [
+        classes.colMain,
         "col-xl-9",
         "col-md-12",
-        classes.colMain,
     ]
+    
+    // TODO when navigating through a url to a dynamic page link, all adaptability styles are reset? How will I fix that? ;)
     
     // page scrolling on the top
     const x = 0
@@ -23,7 +25,7 @@ const NovelPageTitle = props => {
                         <img src={ props.image }  alt='Изображение' width='260px' height='350px' />
                         <button type="button" className={classes.Btn}>Начать читать</button>
                     </div>
-                    {/* TODO may be relocate in a new component ?*/}
+                    {/* TODO may be relocate this in a new component ?*/}
                     <div className={classes.MainInfo}>
                         <div className={classes.Name}>
                             { props.name }
@@ -32,7 +34,7 @@ const NovelPageTitle = props => {
                             Автор: { props.author }
                         </div>
                         <div>
-                            Рейтинг: { props.rating}
+                            Рейтинг: { props.rating }
                         </div>
                         <div>
                             Просмотров: { props.views}

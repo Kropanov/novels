@@ -1,17 +1,41 @@
 import React from "react"
 import classes from "./Navigation.module.scss"
-import {NavLink} from "react-router-dom";
+import MenuToggle from "../MenuToggle/MenuToggle";
+import MediaQuery from "react-responsive"
+import Auxiliary from "../../../hoc/Auxiliary/Auxiliary";
+import Links from "./Links/Links";
+import Backdrop from "../../../UI/Backdrop/Backdrop";
+import {menu} from "../../../redux/actions/actions";
+import {connect} from "react-redux";
 
-const Navigation = () => {
+const Navigation = props => {
     return (
-        <nav className={classes.Navigation}>
-            <NavLink to="/">Главная</NavLink>
-            <NavLink to="/novels">Новеллы</NavLink>
-            <NavLink to="/manga">Манга</NavLink>
-            <NavLink to="/blog">Блог</NavLink>
-            <NavLink to="/users">Вход</NavLink>
-        </nav>
+        <Auxiliary>
+            <MediaQuery query="(min-width: 1200px)">
+                <nav className={classes.Navigation}>
+                    <Links />
+                </nav>
+            </MediaQuery>
+            <MediaQuery query="(max-width: 1199px)">
+                <div style={{margin: "0 2rem"}}>
+                    <MenuToggle/>
+                    {props.menu ? <Backdrop/> : null}
+                </div>
+            </MediaQuery>
+        </Auxiliary>
     )
 }
 
-export default Navigation
+function mapStateToProps(state){
+    return {
+        menu: state.menu,
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        onMenu: () => dispatch(menu()),
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Navigation)

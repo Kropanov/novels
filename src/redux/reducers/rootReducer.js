@@ -3,8 +3,10 @@ import ImageGreetGy from "../../images/ReverendInsanity.jpg";
 import ImageLegendaryMechanic from "../../images/LegMex.jpg";
 import ImageThreeDays from "../../images/ThreeDays.jpg";
 import ImageWorldOnline from "../../images/WorldOnline.jpg";
+import {MENU} from "../actions/actionTypes";
 
 const initialState = {
+    menu: false, // for drawer
     novels: [
         {
             name: "Всемогущий Геймдизайнер",
@@ -76,5 +78,13 @@ const initialState = {
 }
 
 export default function rootReducer(state= initialState, action) {
-    return state
+    switch (action.type) {
+        case MENU:
+            return {
+                ...state,
+                menu: !state.menu,
+            }
+        default:
+            return state
+    }
 }

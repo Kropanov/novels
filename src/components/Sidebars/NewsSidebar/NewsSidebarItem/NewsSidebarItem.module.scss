@@ -1,0 +1,14 @@
+$main-color1: #fd7e14;
+
+
+.NewsSidebarItem {
+    font-size: 17px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    transition: color .22s ease-in-out;
+    &:hover {
+        color: $main-color1;
+    }
+}

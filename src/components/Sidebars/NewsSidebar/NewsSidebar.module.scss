@@ -1,5 +1,12 @@
 $background-color-black1: #212529;
+$main-color2: rgba(255, 255, 255, 0.9);
 
 .NewsSidebar {
+    margin: 50px 25px 40px 0;
     background: $background-color-black1;
+    color: $main-color2;
+    border: 1px solid #101214;
+    div:nth-child(-n+4) {
+        border-bottom: 1px solid #101214;
+    }
 }

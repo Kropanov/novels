@@ -40,6 +40,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
+            {/* TODO copyright footer like separate container right here */}
         </footer>
     )
 }

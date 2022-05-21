@@ -1,14 +1,16 @@
 $main-color1: #fd7e14;
-
+$background-color-black1-hover: rgba(159, 160, 162, 0.07);
 
 .NewsSidebarItem {
+    margin: auto;
     font-size: 17px;
     padding: 20px;
     display: flex;
     justify-content: center;
     cursor: pointer;
-    transition: color .22s ease-in-out;
+    transition: all .19s ease-in-out;
     &:hover {
         color: $main-color1;
+        background: $background-color-black1-hover;
     }
 }

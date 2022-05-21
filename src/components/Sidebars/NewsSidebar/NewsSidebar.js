@@ -10,6 +10,9 @@ import Auxiliary from "../../../hoc/Auxiliary/Auxiliary";
 const NewsSidebar = props => {
     return (
         <aside className={classes.NewsSidebar}>
+            <h2 className={classes.Title}>
+                Последние новости
+            </h2>
             { props.news.map( (newsItem, index ) => {
                 return (
                     <Auxiliary key={index}>

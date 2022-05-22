@@ -1,5 +1,7 @@
 import React from "react"
 import classes from './RatingSidebarItem.module.scss'
+import {Link, Outlet} from "react-router-dom";
+import Auxiliary from "../../../../hoc/Auxiliary/Auxiliary";
 
 const LIMIT = 11
 
@@ -21,24 +23,29 @@ const RatingSidebarItem = props => {
     
     if (props.count < LIMIT) {
         return (
-            <div className={classes.itemRatingSideBar}>
-                <div className={cls.join(' ')}>
-                    #{props.count}
-                </div>
-                <img className={classes.Image} src={ props.image } alt='Изображение' width='94px' height='94px' />
-                <div className={classes.Title}>
-                    <div className={classes.Name}>
-                        { props.name }
+            <Auxiliary>
+                <Link to={`/novels/${props.name}`}>
+                    <div className={classes.itemRatingSideBar}>
+                        <div className={cls.join(' ')}>
+                            #{props.count}
+                        </div>
+                        <img className={classes.Image} src={ props.image } alt='Изображение' width='94px' height='94px' />
+                        <div className={classes.Title}>
+                            <div className={classes.Name}>
+                                { props.name }
+                            </div>
+                            <div className={classes.Rating}>
+                                Рейтинг: { props.rating }
+                            </div>
+                            <div className={classes.Author}>
+                                Просмотров: { props.views }
+                            </div>
+                        </div>
                     </div>
-                    <div className={classes.Rating}>
-                        Рейтинг: { props.rating }
-                    </div>
-                    <div className={classes.Author}>
-                        Просмотров: { props.views }
-                    </div>
-                </div>
-            </div>
-        )
+                </Link>
+                <Outlet/>
+            </Auxiliary>
+    )
     } else {
         return null
     }

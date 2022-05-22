@@ -3,6 +3,7 @@ import classes from './Drawer.module.scss'
 import Links from "../../Navigation/Links/Links";
 import {connect} from "react-redux";
 import {menu} from "../../../../redux/actions/actions";
+import logo from "../../../../images/logo.png";
 
 const Drawer = props => {
     
@@ -16,7 +17,11 @@ const Drawer = props => {
     
     return (
         <div className={cls.join(" ")}>
-            <h1>Novels</h1>
+            <div className={classes.DrawerLogo}>
+                <img src={logo} alt="logo" width="24" height="24"/>
+                <span>Novels</span>
+            </div>
+            
             <Links />
         </div>
     )

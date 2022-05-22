@@ -32,15 +32,23 @@ $background-color-drawer: #1e2023;
         color: $main-color1;
         background: rgba(159, 160, 162, 0.07);
     }
-    h1 {
+    span {
         color: rgba(255, 255, 255, 0.8);;
         font-size: 2em;
         font-style: italic;
         cursor: pointer;
-        border-bottom: 1px solid #ccc;
     }
 }
 
 .showDrawer {
     transform: translateZ(0) translateX(0px);
+}
+
+.DrawerLogo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    span {
+        margin-left: 5px;
+    }
 }

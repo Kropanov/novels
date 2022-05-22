@@ -1,5 +1,5 @@
 :root {
-  --scrollbarBgColor: rgba(52, 58, 64, 0.98);
+  --scrollbarBgColor: rgb(52, 58, 64, 0.1);
   --scrollbarThumbColor: #565555;
   --scrollbarWidth: 10px;
   --scrollbarBorderRadius: calc(var(--scrollbarWidth) / 4);

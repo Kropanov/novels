@@ -1,15 +1,14 @@
 $header-color-black: #1c1f23;
 
 .Header {
-    height: 60px;
-    width: auto;
     background: $header-color-black;
+    height: 60px;
     display: flex;
     align-items: center;
 }
-
-@media (max-width: 1223px) {
-    .Header {
-        justify-content: space-between;
-    }
-}
+//
+//@media (max-width: 1199px) {
+//    .Header {
+//        justify-content: space-between;
+//    }
+//}

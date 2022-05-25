@@ -3,9 +3,11 @@ import ImageGreetGy from "../../images/ReverendInsanity.jpg";
 import ImageLegendaryMechanic from "../../images/LegMex.jpg";
 import ImageThreeDays from "../../images/ThreeDays.jpg";
 import ImageWorldOnline from "../../images/WorldOnline.jpg";
-import {MENU} from "../actions/actionTypes";
+import {IS_SEARCH_BOX_ACTIVE, MENU, SEARCH_BOX_VALUE} from "../actions/actionTypes";
 
 const initialState = {
+    searchBoxValue: "", // search box value
+    isSearchBox: false, // search box active or not
     menu: false, // for drawer
     novels: [
         {
@@ -100,6 +102,16 @@ export default function rootReducer(state= initialState, action) {
             return {
                 ...state,
                 menu: !state.menu,
+            }
+        case IS_SEARCH_BOX_ACTIVE:
+            return {
+                ...state,
+                isSearchBox: !state.isSearchBox,
+            }
+        case SEARCH_BOX_VALUE:
+            return {
+                ...state,
+                searchBoxValue: action.payload
             }
         default:
             return state

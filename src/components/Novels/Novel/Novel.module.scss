@@ -11,9 +11,9 @@ $text-color-novels: #AAAAAA;
     border-radius: 10px;
     padding: 10px;
     display: flex;
-    transition: box-shadow .13s ease-in;
+    transition: box-shadow .15s ease-in;
     &:hover {
-        box-shadow: 0 0 5px 5px #545557;
+        box-shadow: 0 0 5px 4px #545557;
     }
     .Title {
         display: flex;

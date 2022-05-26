@@ -6,7 +6,7 @@ const DropdownSearchList = () => {
     const cls = [
         "translate-middle-x",
         classes.DropdownSearchList,
-        "position-absolute top-0 start-50 translate-middle-x"
+        "position-absolute bottom-20 start-50 translate-middle-x"
     ]
     
     return (

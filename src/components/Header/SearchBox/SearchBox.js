@@ -17,7 +17,7 @@ const SearchBox = props => {
         <div className="col-xl-2 col-md-6 col-sm-5">
             <input
                 className={cls.join(" ")}
-                type="text"
+                type="search"
                 onFocus={props.onSearchBox}
                 onBlur={props.onSearchBox}
                 placeholder="Поиск по названию"

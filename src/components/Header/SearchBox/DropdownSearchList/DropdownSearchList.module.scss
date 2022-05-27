@@ -1,5 +1,26 @@
+$scrollbar-bg-color: #1c1f23;
+$scrollbar-thumb-color: #565555;
+$scrollbar-width: 8px;
+$scrollbar-border-radius: $scrollbar-width / 4;
+
+.DropdownSearchList::-webkit-scrollbar {
+    width: $scrollbar-width;
+}
+
+.DropdownSearchList::-webkit-scrollbar-track {
+    background: $scrollbar-bg-color;
+    border-radius: $scrollbar-border-radius;
+}
+.DropdownSearchList::-webkit-scrollbar-thumb {
+    background-color: $scrollbar-thumb-color;
+    border-radius: 16px;
+}
+
 .DropdownSearchList {
     background: #1c1f23;
-    width: 30%;
     height: 200px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    padding: 5px 10px 10px 10px;
 }

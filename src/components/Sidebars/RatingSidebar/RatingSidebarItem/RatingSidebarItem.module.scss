@@ -4,7 +4,6 @@ $main-color-gold: #ffc107;
 $background-color-black1: #212529;
 $border-color-grey: rgb(74, 87, 94);
 
-
 .Title {
     display: flex;
     flex-flow: column wrap;
@@ -22,8 +21,8 @@ $border-color-grey: rgb(74, 87, 94);
     border: 1px solid $border-color-grey;
     border-radius: 10px;
     justify-content: space-around;
-    //border-bottom: 1px solid #1c1f23;
     margin-bottom: 15px;
+    transition: all .22s ease-in-out;
     &:hover {
         box-shadow: 0 0 5px 2px #545557;
     }
@@ -36,21 +35,8 @@ $border-color-grey: rgb(74, 87, 94);
     box-sizing: border-box;
 }
 
-.Name {
-    &:hover {
-        color: $main-color1;
-        cursor: pointer;
-    }
-}
-
-.Author {
-    &:hover {
-        color: $main-color1;
-        cursor: pointer;
-    }
-}
-
-.Rating {
+.Name, .Author, .Rating {
+    transition: color .22s ease-in-out;
     &:hover {
         color: $main-color1;
         cursor: pointer;
@@ -63,21 +49,18 @@ $border-color-grey: rgb(74, 87, 94);
     padding: 10px;
 }
 
-div {
-    transition: all .22s ease-in-out;
-    .Gold {
-        color: $main-color-gold;
-    }
-    
-    .Silver {
-        color: #a4a4a4;
-    }
-    
-    .Bronze {
-        color: $main-color1;
-    }
-    
-    .Usual {
-        color: $main-color2;
-    }
+.Gold {
+    color: $main-color-gold;
+}
+
+.Silver {
+    color: #a4a4a4;
+}
+
+.Bronze {
+    color: $main-color1;
+}
+
+.Usual {
+    color: $main-color2;
 }

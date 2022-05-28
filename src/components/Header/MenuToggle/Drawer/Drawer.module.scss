@@ -2,6 +2,7 @@ $main-color1: #fd7e14;
 $background-color-drawer: #1e2023;
 
 .Drawer {
+    transition: transform .22s ease-in;
     z-index: 100;
     position: fixed;
     right: 0;
@@ -19,8 +20,10 @@ $background-color-drawer: #1e2023;
         color: rgba(255, 255, 255, 0.8);;
         text-decoration: none;
         padding: 10px 30px;
+        width: 130px;
         transition: all .33s ease-in-out;
         position: relative;
+        text-align: center;
     }
     a:visited {
         color: rgba(255, 255, 255, 0.8);;

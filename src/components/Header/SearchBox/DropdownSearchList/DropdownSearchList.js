@@ -13,6 +13,7 @@ const DropdownSearchList = props => {
     
     return (
         <div className={cls.join(" ")}>
+            <div className={classes.Title}>Возможно, вы искали: </div>
             { props.novels.map((novella, index) => (
                 <DropdownSearchListItem
                     key={index}

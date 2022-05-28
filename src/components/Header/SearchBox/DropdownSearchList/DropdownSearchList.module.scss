@@ -22,5 +22,10 @@ $scrollbar-border-radius: $scrollbar-width / 4;
     display: flex;
     flex-direction: column;
     overflow: auto;
-    padding: 5px 10px 10px 10px;
+    padding: 2px 10px 10px 10px;
+}
+
+.Title {
+    font-size: 18px;
+    color: #cbc9c9;
 }

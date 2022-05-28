@@ -19,7 +19,7 @@ const SearchBox = props => {
                 className={cls.join(" ")}
                 type="search"
                 onFocus={props.onSearchBox}
-                onBlur={props.onSearchBox}
+                onBlur={() => setTimeout(() => props.onSearchBox(), 100)}
                 placeholder="Поиск по названию"
                 onChange={props.onHandleChange}
             />

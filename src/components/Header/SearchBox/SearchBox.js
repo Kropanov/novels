@@ -1,6 +1,6 @@
 import React from 'react'
 import classes from './SearchBox.module.scss'
-import {changeSearchBoxValue, searchBoxActive} from "../../../redux/actions/actions";
+import {changeSearchBoxValue, resetSearchBoxValue, searchBoxActive} from "../../../redux/actions/actions";
 import {connect} from "react-redux";
 
 const SearchBox = props => {
@@ -19,9 +19,13 @@ const SearchBox = props => {
                 className={cls.join(" ")}
                 type="search"
                 onFocus={props.onSearchBox}
-                onBlur={() => setTimeout(() => props.onSearchBox(), 100)}
+                onBlur={() => setTimeout(() => {
+                    props.onResetValue()
+                    props.onSearchBox()
+                }, 100)}
                 placeholder="Поиск по названию"
                 onChange={props.onHandleChange}
+                value={props.searchBoxValue}
             />
         </div>
     )
@@ -38,6 +42,7 @@ function mapDispatchToProps(dispatch) {
     return {
         onSearchBox: () => dispatch(searchBoxActive()),
         onHandleChange: event => dispatch(changeSearchBoxValue(event)),
+        onResetValue: () => dispatch(resetSearchBoxValue()),
     }
 }
 

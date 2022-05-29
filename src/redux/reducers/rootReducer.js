@@ -3,7 +3,7 @@ import ImageGreetGy from "../../images/ReverendInsanity.jpg";
 import ImageLegendaryMechanic from "../../images/LegMex.jpg";
 import ImageThreeDays from "../../images/ThreeDays.jpg";
 import ImageWorldOnline from "../../images/WorldOnline.jpg";
-import {IS_SEARCH_BOX_ACTIVE, MENU, SEARCH_BOX_VALUE} from "../actions/actionTypes";
+import {IS_SEARCH_BOX_ACTIVE, MENU, RESET_SEARCH_BOX_VALUE, SEARCH_BOX_VALUE} from "../actions/actionTypes";
 
 const initialState = {
     searchBoxValue: "", // search box value
@@ -112,6 +112,11 @@ export default function rootReducer(state= initialState, action) {
             return {
                 ...state,
                 searchBoxValue: action.payload
+            }
+        case RESET_SEARCH_BOX_VALUE:
+            return {
+                ...state,
+                searchBoxValue: ""
             }
         default:
             return state

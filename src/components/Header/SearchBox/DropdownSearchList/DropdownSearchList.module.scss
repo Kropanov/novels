@@ -20,12 +20,16 @@ $scrollbar-border-radius: $scrollbar-width / 4;
     background: #1c1f23;
     height: 200px;
     display: flex;
+    width: 400px;
     flex-direction: column;
     overflow: auto;
     padding: 2px 10px 10px 10px;
 }
 
+.SearchList { order: 2}
+
 .Title {
     font-size: 18px;
     color: #cbc9c9;
+    order: 1;
 }

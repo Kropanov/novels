@@ -11,9 +11,6 @@ const NovelPageTitle = props => {
         "col-md-12",
     ]
     
-    // TODO when navigating through a url to a dynamic page link, all adaptability styles are reset? How will I fix that? ;)
-    // Now, i know what the problem is...
-    
     // page scrolling on the top
     const x = 0
     const y = 0
@@ -54,10 +51,6 @@ const NovelPageTitle = props => {
                         </div>
                     </div>
                 </div>
-                {/* TODO sidebar of news (for now sidebar of a rating)*/}
-                {/*<div className="col-xl-3 col-md-12">*/}
-                {/*    <RatingSidebar novels={props.novels} />*/}
-                {/*</div>*/}
                 <div className="col-xl-3 col-md-12">
                     <NewsSidebar/>
                 </div>

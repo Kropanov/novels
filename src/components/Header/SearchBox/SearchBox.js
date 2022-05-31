@@ -5,9 +5,6 @@ import {connect} from "react-redux";
 
 const SearchBox = props => {
     
-    console.log(props.searchBoxStatus)
-    console.log(props.searchBoxValue)
-    
     const cls = [
         "form-control",
         classes.SearchBox

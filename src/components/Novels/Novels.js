@@ -1,21 +1,36 @@
 import React from "react"
 import classes from "./Novels.module.scss"
 import Novel from "./Novel/Novel";
-import Auxiliary from "../../hoc/Auxiliary/Auxiliary";
 
 const Novels = props => {
+    
+    const cls = [
+        classes.Novels,
+    ]
+    
+    if (props.checkingTheArea) {
+        cls.push(classes.NovelsFlex)
+    }
+    
     return (
-        <div className={classes.Novels}>
+        <div className={cls.join(" ")}>
             { props.novels.map((novel, index) => {
                 return (
-                    <Auxiliary key={index}>
+                    props.checkingTheArea
+                    ?
                         <Novel
+                            key={index}
+                            image={novel.image}
+                            name={novel.name}
+                        />
+                    :
+                        <Novel
+                            key={index}
                             image={novel.image}
                             name={novel.name}
                             author={novel.author}
                             description={novel.description}
                         />
-                    </Auxiliary>
                 )
             })
             }

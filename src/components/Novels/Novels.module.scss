@@ -7,3 +7,22 @@ $background-color-black1: #212529;
     border-radius: 5px;
     background: $background-color-black1;
 }
+
+.NovelsFlex {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    width: 100%;
+    a {
+        font-size: 13px;
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+    }
+    a:visited {
+        color: white;
+    }
+    a:active {
+        color: white;
+    }
+}

@@ -17,6 +17,7 @@ $scrollbar-border-radius: $scrollbar-width / 4;
 }
 
 .DropdownSearchList {
+    z-index: 100;
     background: #1c1f23;
     height: 200px;
     display: flex;

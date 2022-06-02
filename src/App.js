@@ -7,6 +7,7 @@ import Main from "./containers/Main/Main"
 import Footer from "./components/Footer/Footer";
 import NovelPage from "./components/Novelpage/NovelPage";
 import { connect } from "react-redux";
+import Novells from "./containers/Novells/Novells";
 
 class App extends Component {
     render() {
@@ -16,7 +17,7 @@ class App extends Component {
                     <Header/>
                     <Routes>
                         <Route index element={<Main novels={this.props.novels}/>} />
-                        <Route path="novels" element={<h1>This is novels</h1>}/>
+                        <Route path="novels" element={<Novells/>}/>
                         <Route path="/novels/:name" element={<NovelPage novels={this.props.novels}/>}/>
                         <Route path="manga" element={<h1>This is manga</h1>}/>
                         <Route path="blog" element={<h1>This is blog</h1>}/>

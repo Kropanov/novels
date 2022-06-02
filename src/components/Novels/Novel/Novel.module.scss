@@ -20,23 +20,22 @@ $text-color-novels: #AAAAAA;
         flex-flow: column wrap;
         padding: 10px;
     }
+    .Name {
+        font-size: 1.3em;
+        margin-bottom: 10px;
+        color: $main-color2;
+        margin-top: -10px;
+        transition: color .22s ease-in-out;
+        &:hover {
+            color: $main-color1;
+            cursor: pointer;
+        }
+    }
 }
 
 .Image {
     max-width: 100%;
     box-sizing: border-box;
-}
-
-.Name {
-    font-size: 1.3em;
-    margin-bottom: 10px;
-    color: $main-color2;
-    margin-top: -10px;
-    transition: color .22s ease-in-out;
-    &:hover {
-        color: $main-color1;
-        cursor: pointer;
-    }
 }
 
 .Author {
@@ -52,4 +51,20 @@ $text-color-novels: #AAAAAA;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     margin-top: 10px;
     font-size: 18px;
+}
+
+.NovelFromNovells {
+    box-shadow: 2px 2px 2px 4px rgba(1, 2, 3, 0.27);
+    height: 200px;
+    width: 150px;
+    background-size: cover;
+    margin-bottom: 10px;
+    position: relative;
+    transition: all .19s ease-in;
+    .Name {
+        position: absolute;
+        bottom: 0;
+        text-shadow: 1px 2px 1px rgb(1, 2, 3);
+        margin: 0 0 5px 5px;
+    }
 }

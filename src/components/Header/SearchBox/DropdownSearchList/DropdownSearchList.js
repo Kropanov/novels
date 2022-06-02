@@ -32,7 +32,6 @@ const DropdownSearchList = props => {
                             />
                         )
                     }
-                    
                     return null
                 })}
             </div>

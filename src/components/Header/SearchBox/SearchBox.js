@@ -19,7 +19,7 @@ const SearchBox = props => {
                 onBlur={() => setTimeout(() => {
                     props.onResetValue()
                     props.onSearchBox()
-                }, 100)}
+                }, 200)}
                 placeholder="Поиск по названию"
                 onChange={props.onHandleChange}
                 value={props.searchBoxValue}

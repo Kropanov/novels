@@ -1,17 +1,18 @@
 import React, {Component} from "react"
 import {connect} from "react-redux"
-import Novels from "../../components/Novels/Novels";
+import Novels from "../../components/Novels/Novels"
+import FilterSearchSidebar from "../../components/Sidebars/FilterSearchSidebar/FilterSearchSidebar"
 
 class Novells extends Component {
     render() {
         return (
             <div className="container">
                 <div className="row">
-                    <div style={{display: "flex", justifyContent: "center"}} className="col-9">
+                    <div className="d-flex justify-content-center col-9">
                         <Novels novels={this.props.novels} checkingTheArea={true}/>
                     </div>
-                    <div style={{background: "darkgrey"}} className="col-3">
-                        Фильтр поиска (в разработке)
+                    <div className="d-flex justify-content-center bg-dark col-3">
+                        <FilterSearchSidebar/>
                     </div>
                 </div>
             </div>

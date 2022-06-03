@@ -1,0 +1,18 @@
+$main-dark-background-color: #1c1f23;
+$main-gray-text-color: rgb(108 117 125);
+
+@mixin color($color, $bgColor) {
+    color: $color;
+    background: $bgColor;
+}
+
+.FilterSearchSidebar {
+    background: cornflowerblue;
+    margin: 20px;
+    width: 100%;
+}
+
+.Label, .SelectInput {
+    @include color($main-gray-text-color, $main-dark-background-color);
+}
+

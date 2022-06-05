@@ -11,7 +11,7 @@ class Novells extends Component {
                     <div className="d-flex justify-content-center col-9">
                         <Novels novels={this.props.novels} checkingTheArea={true}/>
                     </div>
-                    <div className="d-flex justify-content-center bg-dark col-3">
+                    <div className="d-flex justify-content-center col-3">
                         <FilterSearchSidebar/>
                     </div>
                 </div>

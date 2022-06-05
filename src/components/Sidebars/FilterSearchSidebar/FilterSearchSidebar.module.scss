@@ -7,12 +7,21 @@ $main-gray-text-color: rgb(108 117 125);
 }
 
 .FilterSearchSidebar {
-    background: cornflowerblue;
+    max-width: 300px;
+    max-height: 350px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 20px;
+    background: $main-dark-background-color;
     margin: 20px;
-    width: 100%;
 }
 
 .Label, .SelectInput {
     @include color($main-gray-text-color, $main-dark-background-color);
 }
 
+.FilterSearchTitle {
+    color: white;
+    margin-top: 5px;
+}

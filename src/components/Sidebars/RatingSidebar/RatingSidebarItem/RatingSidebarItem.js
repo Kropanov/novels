@@ -3,7 +3,7 @@ import classes from './RatingSidebarItem.module.scss'
 import {Link, Outlet} from "react-router-dom";
 import Auxiliary from "../../../../hoc/Auxiliary/Auxiliary";
 
-const LIMIT = 11
+const LIMIT = 6
 
 const RatingSidebarItem = props => {
     

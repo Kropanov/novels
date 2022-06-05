@@ -36,7 +36,7 @@ const FilterSearchSidebar = () => {
                 </select>
             </div>
             <div className="d-flex align-content-center flex-column input-group">
-                <div className={classes.FilterSearchTitle}>Статус перевода</div>
+                <div className={classes.FilterSearchTitle}>Статус перевода:</div>
                 <div style={{border: "none", padding: "0 0 0 12px"}} className={`input-group-text ${classes.Label}`}>
                     <input className="form-check-input mt-0 pt-0" type="checkbox" value=""
                            aria-label="Checkbox for following text input"/>

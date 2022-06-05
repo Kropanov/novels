@@ -1,15 +1,48 @@
-import ImageGameDesigner from "../../images/GameDesigner.jpg";
-import ImageGreetGy from "../../images/ReverendInsanity.jpg";
-import ImageLegendaryMechanic from "../../images/LegMex.jpg";
-import ImageThreeDays from "../../images/ThreeDays.jpg";
-import ImageWorldOnline from "../../images/WorldOnline.jpg";
-import {IS_SEARCH_BOX_ACTIVE, MENU, RESET_SEARCH_BOX_VALUE, SEARCH_BOX_VALUE} from "../actions/actionTypes";
+import ImageGameDesigner from "../../images/GameDesigner.jpg"
+import ImageGreetGy from "../../images/ReverendInsanity.jpg"
+import ImageLegendaryMechanic from "../../images/LegMex.jpg"
+import ImageThreeDays from "../../images/ThreeDays.jpg"
+import ImageWorldOnline from "../../images/WorldOnline.jpg"
+import ImageAsura from "../../images/Asura.jpg"
+import ImageMonsterParadise from "../../images/MonsterParadise.jpg"
+import ImageDragon from "../../images/Dragon.jpg"
+import AgainstTheGods from "../../images/AgainstTheGods.png"
+import Mag from "../../images/Mag.png"
+import {IS_SEARCH_BOX_ACTIVE, MENU, RESET_SEARCH_BOX_VALUE, SEARCH_BOX_VALUE} from "../actions/actionTypes"
 
 const initialState = {
     searchBoxValue: "", // search box value
     isSearchBox: false, // search box active or not
     menu: false, // for drawer
     novels: [
+        {
+            name: "Рай монстров",
+            author: "Nuclear Warhead Cooked in Wine",
+            description: "800 лет назад, 3 000 пространственных врат открылись по всему миру. Как будто 3 000 разноцветных глаз открылись и монстры хлынули из них, словно слёзы. Некоторые могли одним ударом уничтожить городские стены, тела их были гигантские и питались они людьми. Некоторые крепились к людям, вытягивали из них питательные вещества и порабощали их. Некоторые проникали в города, маскируясь под обычных жителей, в то время как питались они человеческой кровью, чтобы поддерживать свою жизнь.\n" +
+                "\n" +
+                "В одну ночь человеческая раса упала на дно пищевой цепи, и мир превратился в рай для монстров...",
+            image: ImageMonsterParadise,
+            likes: 0,
+            dislikes: 0,
+            rating: 4.4,
+            views: 77,
+        },
+        {
+            name: "Бог Войны, отмеченный Драконом",
+            author: "Dragon-Marked War God",
+            description: "Некогда величайший Святой, переродился спустя столетие. Он развивает могучие навыки и сражается, дабы снова взойти на вершину мира!\n" +
+    
+            "\nНикто не может сравниться с ним в скорости развития, ибо все меркнут в его тени.\n" +
+        
+            "\nНикто не сравнится с ним в боевом опыте, ибо он величайший предок прошлого.\n" +
+    
+            "Судьбой Цзян Чэню суждено затмить тысячи гениев...",
+            image: ImageDragon,
+            likes: 0,
+            dislikes: 0,
+            rating: 4.7,
+            views: 118,
+        },
         {
             name: "Всемогущий Геймдизайнер",
             author: "Qing Shan Qu Zui",
@@ -19,6 +52,16 @@ const initialState = {
             dislikes: 0,
             rating: 4.2,
             views: 31,
+        },
+        {
+            name: "Маг на полную ставку",
+            author: "Chaos",
+            description: "Он проснулся в привычном ему мире, который сильно изменился. Его школа стала школой магии, которая призывает всех стать могущественными магами. За пределами города бродит множество монстров. Мир науки и технологии превратился в мир магии! Несмотря на это, его амбиции и положение в обществе не изменились. Он - отброс общества, у которого сестра-инвалид, которая даже не может ходить. Тем не менее, Мо Фань обнаружил, что все люди могут управлять лишь одним элементом, но только не он, ему подвластно больше!",
+            image: Mag,
+            likes: 0,
+            dislikes: 0,
+            rating: 4.2,
+            views: 129,
         },
         {
             name: "Преподобный Гу",
@@ -75,6 +118,26 @@ const initialState = {
             dislikes: 0,
             rating: 3.9,
             views: 53,
+        },
+        {
+            name: "Воинственный Бог Асура",
+            author: "Kindhearted Bee",
+            description: "Даже если у тебя и есть потенциал, это вовсе не значит, что ты гений. Ты можешь выучить какие-нибудь тайные боевые техники и за их счет получить силу. И будь ты даже силен и богат, это вовсе не значит, что ты сможешь одолеть мою армию духов. Кто я? Каждое живое существо признало меня Асурой. И я объявляю тебе войну!",
+            image: ImageAsura,
+            likes: 0,
+            dislikes: 0,
+            rating: 5.0,
+            views: 189,
+        },
+        {
+            name: "Восставший против неба",
+            author: "Mars Gravity",
+            description: "Убегая от погони, юноша прыгает с обрыва, чтобы доставшееся ему сокровище не попало в руки преследователей. Очнувшись, он обнаруживает себя в теле юноши с таким же именем в другом мире. К счастью, ему удалось сохранить и сокровище.",
+            image: AgainstTheGods,
+            likes: 0,
+            dislikes: 0,
+            rating: 4.0,
+            views: 201,
         },
     ],
     news: [

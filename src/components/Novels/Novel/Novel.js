@@ -25,11 +25,20 @@ const Novel = props => {
             </div>
         )
     } else {
+        
+        let shortName
+        const splitName = props.name.split(" ")
+        if (splitName.length > 2) {
+            shortName = splitName[0] + " " + splitName[1] + "..."
+        } else {
+            shortName = props.name
+        }
+        
         return (
             <Link to={`/novels/${props.name}`}>
                 <div style={{backgroundImage: `url(${props.image})`}} className={classes.NovelFromNovells}>
                     <div className={classes.Name}>
-                        {props.name}
+                        {shortName}
                     </div>
                 </div>
                 <Outlet/>

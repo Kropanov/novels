@@ -1,0 +1,33 @@
+$main-color1: #fd7e14;
+$main-color2: rgba(255, 255, 255, 0.8);
+
+.tabContent {
+    margin-top: 3.4em;
+    color: #AAAAAA;
+    font-size: 18px;
+    margin-bottom: 3em;
+}
+
+.navItem {
+    //border: 1px solid rgb(0, 0, 0, 0.4);
+    margin-top: 10px;
+    transition: background .33s ease-in-out;
+    border-radius: 0.25rem;
+    &:hover {
+        background: rgb(0, 0, 0, 0.1);
+    }
+    a {
+        cursor: pointer;
+        color: $main-color2;
+        text-decoration: none;
+    }
+    a:visited {
+        color: $main-color2;
+    }
+    a:active {
+        color: $main-color2;
+    }
+    a:hover {
+        color: $main-color1;
+    }
+}

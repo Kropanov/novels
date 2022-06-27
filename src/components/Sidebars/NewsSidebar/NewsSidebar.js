@@ -17,7 +17,7 @@ const NewsSidebar = props => {
                 return (
                     <Auxiliary key={index}>
                         <NewsSidebarItem
-                            text={newsItem.text}
+                            title={newsItem.title}
                         />
                     </Auxiliary>
                 )

@@ -1,6 +1,7 @@
 $background-color-black1: #212529;
 $main-color2: rgba(255, 255, 255, 0.9);
 $border-color-grey: rgb(74, 87, 94);
+$main-color1: #fd7e14;
 
 .NewsSidebar {
     margin: 30px 25px 40px 0;
@@ -9,6 +10,20 @@ $border-color-grey: rgb(74, 87, 94);
     border: 1px solid $border-color-grey;
     div:nth-child(-n+6) {
         border-top: 1px solid $border-color-grey;
+    }
+    a {
+        cursor: pointer;
+        color: $main-color2;
+        text-decoration: none;
+    }
+    a:visited {
+        color: $main-color2;
+    }
+    a:active {
+        color: $main-color2;
+    }
+    a:hover {
+        color: $main-color1;
     }
 }
 

@@ -2,7 +2,6 @@ import React from 'react'
 import classes from './NewsSidebar.module.scss'
 import {connect} from "react-redux"
 import NewsSidebarItem from "./NewsSidebarItem/NewsSidebarItem";
-import Auxiliary from "../../../hoc/Auxiliary/Auxiliary";
 
 // Well, may be, the sidebar components should be in the container?? (yea, this is fail)
 // But this situation will be a good experience :)
@@ -15,11 +14,11 @@ const NewsSidebar = props => {
             </h2>
             { props.news.map( (newsItem, index ) => {
                 return (
-                    <Auxiliary key={index}>
-                        <NewsSidebarItem
-                            title={newsItem.title}
-                        />
-                    </Auxiliary>
+                    <NewsSidebarItem
+                        key={index}
+                        id={index}
+                        title={newsItem.title}
+                    />
                 )
             })}
         </aside>

@@ -7,7 +7,7 @@ import classes from "./Blog.module.scss"
 
 const Blog = props => {
     return (
-        <Tab.Container id="list-group-tabs-example" defaultActiveKey="0">
+        <Tab.Container id="list-group-tabs-example" defaultActiveKey={props.id}>
             <Container>
                 <Row>
                     <Col sm={3}>
@@ -37,7 +37,8 @@ const Blog = props => {
 
 function mapStateToProps(state) {
     return {
-        news: state.news
+        news: state.news,
+        id: state.blogId
     }
 }
 

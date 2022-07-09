@@ -1,11 +1,19 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {Col, Container, Nav, Row} from "react-bootstrap";
 import {Tab} from "react-bootstrap";
 import {connect} from "react-redux";
 import classes from "./Blog.module.scss"
+import {changeBlogId} from "../../redux/actions/actions";
 
 
 const Blog = props => {
+    
+    useEffect(() => {
+        return () => {
+            props.onChangeBlogId(0)
+        }
+    }, [props])
+    
     return (
         <Tab.Container id="list-group-tabs-example" defaultActiveKey={props.id}>
             <Container>
@@ -42,4 +50,10 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps, null)(Blog)
+function mapDispatchToProps(dispatch) {
+    return {
+        onChangeBlogId: (index) => dispatch(changeBlogId(index)),
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Blog)

@@ -9,6 +9,7 @@ import NovelPage from "./components/Novelpage/NovelPage";
 import { connect } from "react-redux";
 import Novells from "./containers/Novells/Novells";
 import Blog from "./containers/Blog/Blog";
+import Authorization from "./containers/Authorization/Authorization";
 
 class App extends Component {
     render() {
@@ -22,7 +23,7 @@ class App extends Component {
                         <Route path="/novels/:name" element={<NovelPage novels={this.props.novels}/>}/>
                         <Route path="manga" element={<h1>This is manga</h1>}/>
                         <Route path="blog" element={<Blog />}/>
-                        <Route path="users" element={<h1>This is users</h1>}/>
+                        <Route path="users" element={<Authorization/>}/>
                         <Route path="*" element={<h1>404 not found</h1>}/>
                     </Routes>
                     <Footer/>

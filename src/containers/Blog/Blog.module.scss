@@ -13,9 +13,6 @@ $main-color2: rgba(255, 255, 255, 0.8);
     margin-top: 10px;
     transition: background .33s ease-in-out;
     border-radius: 0.25rem;
-    &:hover {
-        background: rgb(0, 0, 0, 0.1);
-    }
     a {
         cursor: pointer;
         color: $main-color2;
@@ -29,5 +26,6 @@ $main-color2: rgba(255, 255, 255, 0.8);
     }
     a:hover {
         color: $main-color1;
+        background: rgb(0, 0, 0, 0.1);
     }
 }

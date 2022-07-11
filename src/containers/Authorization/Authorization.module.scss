@@ -1,3 +1,8 @@
+$main-color2: rgba(255, 255, 255, 0.8);
+//$border-color-grey: rgb(74, 87, 94);
+$background-color: #1c1f23;
+
+
 .Authorization {
     position: relative;
     display: flex;
@@ -8,8 +13,17 @@
 }
 
 .AuthContainer {
-    margin: 100px;
+    background: $background-color;
+    margin: 100px auto;
     width: 500px;
     height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border: 1px solid black;
+    border-radius: 7px;
+    h1 {
+        color: $main-color2;
+        align-items: center;
+    }
 }

@@ -1,7 +1,8 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import classes from './NovelPageTitle.module.scss'
 // import RatingSidebar from "../../Sidebars/RatingSidebar/RatingSidebar"
 import NewsSidebar from "../../Sidebars/NewsSidebar/NewsSidebar"
+import {scrollPageUp} from "../../../store/functions/functions";
 
 const NovelPageTitle = props => {
     
@@ -11,10 +12,9 @@ const NovelPageTitle = props => {
         "col-md-12",
     ]
     
-    // page scrolling on the top
-    const x = 0
-    const y = 0
-    window.scrollTo(x, y)
+    useEffect(() => {
+        scrollPageUp()
+    })
     
     return (
         <div className="container-fluid">

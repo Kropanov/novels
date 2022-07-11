@@ -5,7 +5,7 @@ const Authorization = () => {
     return (
         <div className={classes.Authorization}>
             <div className={classes.AuthContainer}>
-            wefw
+                <h1>Авторизация</h1>
             </div>
         </div>
     )

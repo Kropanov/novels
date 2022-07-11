@@ -4,11 +4,12 @@ import {Tab} from "react-bootstrap";
 import {connect} from "react-redux";
 import classes from "./Blog.module.scss"
 import {changeBlogId} from "../../redux/actions/actions";
-
+import {scrollPageUp} from "../../store/functions/functions";
 
 const Blog = props => {
     
     useEffect(() => {
+        scrollPageUp()
         return () => {
             props.onChangeBlogId(0)
         }

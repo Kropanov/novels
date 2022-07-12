@@ -15,8 +15,8 @@ $background-color: #1c1f23;
 .AuthContainer {
     background: $background-color;
     margin: 100px auto;
-    width: 500px;
-    height: 400px;
+    width: 400px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,5 +25,6 @@ $background-color: #1c1f23;
     h1 {
         color: $main-color2;
         align-items: center;
+        margin-top: 20px;
     }
 }

@@ -8,6 +8,7 @@ $background-color-black1: rgba(159, 160, 162, 0.07);
         text-decoration: none;
         padding: 10px;
         transition: all .33s ease-in-out;
+        border-radius: 10px;
     }
     a:visited {
         color: white;
@@ -18,7 +19,6 @@ $background-color-black1: rgba(159, 160, 162, 0.07);
     a:hover {
         color: $main-color1;
         background: $background-color-black1;
-        border-radius: 10px;
     }
 }
 

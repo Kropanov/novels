@@ -8,7 +8,7 @@ const Links = () => {
         <Auxiliary>
             <NavLink to="/">Главная</NavLink>
             <NavLink to="/novels">Новеллы</NavLink>
-            <NavLink to="/manga">Манга</NavLink>
+            <NavLink to="/profile">Профиль</NavLink>
             <MediaQuery query="(max-width: 576px)">
                 <NavLink to="/search">Поиск</NavLink>
             </MediaQuery>

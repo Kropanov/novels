@@ -19,7 +19,7 @@ const Footer = () => {
                             <span>Ссылки</span>
                             <Link to='/'><li>Главная</li></Link>
                             <Link to='/novels'><li>Новеллы</li></Link>
-                            <Link to='/manga'><li>Манга</li></Link>
+                            <Link to='/profile'><li>Профиль</li></Link>
                             <Link to='/blog'><li>Блог</li></Link>
                         </ul>
                     </div>

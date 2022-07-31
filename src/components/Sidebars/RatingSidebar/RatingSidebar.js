@@ -5,10 +5,7 @@ import RatingSidebarItem from './RatingSidebarItem/RatingSidebarItem'
 const RatingSidebar = props => {
     
     const novels = [...props.novels]
-    // massive obj was sorted
     novels.sort((prev, next) => next.rating - prev.rating)
-    
-    let count = 1
     
     return (
         <aside className={classes.RatingSideBar}>
@@ -20,7 +17,7 @@ const RatingSidebar = props => {
                         name={novel.name}
                         rating={novel.rating}
                         views={novel.views}
-                        count={count++}
+                        count={index+1}
                     />
                 )
             })}

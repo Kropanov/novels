@@ -4,6 +4,7 @@ import Links from "../../Navigation/Links/Links";
 import {connect} from "react-redux";
 import {menu} from "../../../../redux/actions/actions";
 import logo from "../../../../images/logo.png";
+import {NAME_SITE} from "../../../../сonstants/сonstants";
 
 const Drawer = props => {
     
@@ -19,9 +20,8 @@ const Drawer = props => {
         <div className={cls.join(" ")}>
             <div className={classes.DrawerLogo}>
                 <img src={logo} alt="logo" width="24" height="24"/>
-                <span>Novels</span>
+                <span>{NAME_SITE}</span>
             </div>
-            
             <Links />
         </div>
     )

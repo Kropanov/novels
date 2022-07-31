@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import classes from './Pagination.module.scss'
 import {Tab, Tabs} from "react-bootstrap"
+import Settings from "../../Settings/Settings";
 
 const Pagination = () => {
     const [key, setKey] = useState('home');
@@ -31,7 +32,7 @@ const Pagination = () => {
                 eventKey="contact"
                 title="Настройки"
             >
-                3
+                <Settings />
             </Tab>
         </Tabs>
     );

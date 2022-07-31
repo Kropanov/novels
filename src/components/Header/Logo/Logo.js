@@ -2,6 +2,7 @@ import React from "react"
 import classes from './Logo.module.scss'
 import { NavLink } from "react-router-dom"
 import logo from "../../../images/logo.png"
+import {NAME_SITE} from "../../../сonstants/сonstants";
 
 
 const Logo = () => {
@@ -10,7 +11,7 @@ const Logo = () => {
             <NavLink to='/'>
                 <div className={classes.Logo}>
                     <img src={logo} alt="logo" width="24" height="24"/>
-                    <span>Novels</span>
+                    <span>{NAME_SITE}</span>
                 </div>
             </NavLink>
         </div>

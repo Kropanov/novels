@@ -2,8 +2,8 @@ import React from "react"
 import classes from './RatingSidebarItem.module.scss'
 import {Link, Outlet} from "react-router-dom";
 import Auxiliary from "../../../../hoc/Auxiliary/Auxiliary";
+import {RATING_LIMIT_COUNT} from "../../../../сonstants/сonstants";
 
-const LIMIT = 6
 
 const RatingSidebarItem = props => {
     
@@ -21,7 +21,7 @@ const RatingSidebarItem = props => {
         cls.push(classes.Usual)
     }
     
-    if (props.count < LIMIT) {
+    if (props.count <= RATING_LIMIT_COUNT) {
         return (
             <Auxiliary>
                 <Link to={`/novels/${props.name}`}>

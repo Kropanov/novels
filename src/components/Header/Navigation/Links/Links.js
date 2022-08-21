@@ -2,17 +2,19 @@ import React from "react"
 import Auxiliary from "../../../../hoc/Auxiliary/Auxiliary";
 import {NavLink} from "react-router-dom";
 import MediaQuery from "react-responsive";
+import './Links.module.scss'
 import {
     HouseHeart,
     Book,
     PersonCircle,
     Newspaper,
     DoorOpen,
+    Search
 } from 'react-bootstrap-icons';
 
 const Links = () => {
     return (
-        <Auxiliary>
+        <Auxiliary >
             <NavLink to="/">
                 <HouseHeart />
                 Главная
@@ -27,6 +29,7 @@ const Links = () => {
             </NavLink>
             <MediaQuery query="(max-width: 576px)">
                 <NavLink to="/search">
+                    <Search />
                     Поиск
                 </NavLink>
             </MediaQuery>

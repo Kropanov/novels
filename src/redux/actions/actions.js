@@ -1,4 +1,11 @@
-import {BLOG_ID, IS_SEARCH_BOX_ACTIVE, MENU, RESET_SEARCH_BOX_VALUE, SEARCH_BOX_VALUE} from "./actionTypes";
+import {
+    BLACK_THEME,
+    BLOG_ID,
+    IS_SEARCH_BOX_ACTIVE,
+    MENU,
+    RESET_SEARCH_BOX_VALUE,
+    SEARCH_BOX_VALUE
+} from "./actionTypes";
 
 export function menu() {
     return {
@@ -29,5 +36,11 @@ export function changeBlogId(index) {
     return {
         type: BLOG_ID,
         payload: index,
+    }
+}
+
+export function changeTheme() {
+    return {
+        type: BLACK_THEME
     }
 }

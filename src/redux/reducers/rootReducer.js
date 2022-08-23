@@ -8,9 +8,17 @@ import ImageMonsterParadise from "../../images/MonsterParadise.jpg"
 import ImageDragon from "../../images/Dragon.jpg"
 import AgainstTheGods from "../../images/AgainstTheGods.png"
 import Mag from "../../images/Mag.png"
-import {BLOG_ID, IS_SEARCH_BOX_ACTIVE, MENU, RESET_SEARCH_BOX_VALUE, SEARCH_BOX_VALUE} from "../actions/actionTypes"
+import {
+    BLACK_THEME,
+    BLOG_ID,
+    IS_SEARCH_BOX_ACTIVE,
+    MENU,
+    RESET_SEARCH_BOX_VALUE,
+    SEARCH_BOX_VALUE
+} from "../actions/actionTypes"
 
 const initialState = {
+    blackTheme: true,
     searchBoxValue: "", // search box value
     isSearchBox: false, // search box active or not
     menu: false, // for drawer
@@ -240,6 +248,11 @@ export default function rootReducer(state= initialState, action) {
             return {
                 ...state,
                 blogId: action.payload
+            }
+        case BLACK_THEME:
+            return  {
+                ...state,
+                blackTheme: !state.blackTheme
             }
         default:
             return state

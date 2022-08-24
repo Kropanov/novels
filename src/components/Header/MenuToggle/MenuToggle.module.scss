@@ -1,15 +1,31 @@
-$background-color-black1: rgba(159, 160, 162, 0.07);
+$color-black: rgba(0, 0, 0, 0.87);
+$color-white: white;
+$background-color-black: rgba(159, 160, 162, 0.07);
+$background-color-white: rgba(150, 150, 150, 0.34);
 
 .MenuToggle {
+    width: 30px;
+    height: 30px;
     cursor: pointer;
     border-radius: 10px;
     transition: background .17s ease-in-out;
-    &:hover {
-        background: $background-color-black1;
-    }
 }
 
 .MenuToggleFlex {
     display: flex;
     justify-content: flex-end;
+}
+
+.BlackTheme {
+    color: $color-white;
+    &:hover {
+        background: $background-color-black;
+    }
+}
+
+.WhiteTheme {
+    color: $color-black;
+    &:hover {
+        background: $background-color-white;
+    }
 }

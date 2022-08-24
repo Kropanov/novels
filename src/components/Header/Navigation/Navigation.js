@@ -26,7 +26,7 @@ const Navigation = props => {
             </MediaQuery>
             <MediaQuery query="(max-width: 1199px)">
                 <div style={{margin: "0 2rem"}}>
-                    <MenuToggle/>
+                    <MenuToggle blackTheme={props.blackTheme} />
                     {props.menu ? <Backdrop/> : null}
                 </div>
             </MediaQuery>

@@ -1,36 +1,19 @@
-$main-color1: #fd7e14;
+$main-color-black: #fd7e14;
 $footer-color-black: #1c1f23;
-$footer-color-hover: rgba(159, 160, 162, 0.07);
-$main-color2: rgba(255, 255, 255, 0.8);
+$footer-color-hover-black: rgba(159, 160, 162, 0.07);
+$footer-color-hover-white: rgba(150, 150, 150, 0.34);
+$color-white: rgba(255, 255, 255, 0.8);
+$color-black: rgba(0, 0, 0, 0.88);
 
 
 .Footer {
-    background: $footer-color-black;
     width: auto;
     padding: 20px;
-    //box-shadow: 0 -2px 1px 1px rgb(0, 0, 0, 0.1);
 }
 
 footer {
     margin-top: auto;
-    color: $main-color2;
-    a {
-        color: $main-color2;
-        text-decoration: none;
-        //transition: all .33s ease-in-out;
-    }
-    a:visited {
-        color: $main-color2;
-    }
-    a:active {
-        color: $main-color2;
-    }
-    li:hover {
-        border-radius: 5px;
-        color: $main-color1;
-        padding: 5px;
-        background: $footer-color-hover;
-    }
+    
 }
 
 ul {
@@ -39,22 +22,68 @@ ul {
     padding: 10px;
     span {
         border-radius: 3px;
-        padding: 2px;
+        padding: 2px 5px 2px 5px;
         font-size: 20px;
-        color: black;
-        background: $main-color1;
         text-align: center;
     }
     li {
         cursor: pointer;
         transition: all .12s ease-in-out;
     }
-    li:hover {
-        color: $main-color1;
-    }
 }
 
 div.row div {
     display: flex;
     align-items: center;
+}
+
+.BlackThemeFooterContainer {
+    background: $footer-color-black;
+    color: $color-white;
+    a {
+        color: $color-white;
+        text-decoration: none;
+    }
+    a:visited {
+        color: $color-white;
+    }
+    a:active {
+        color: $color-white;
+    }
+    li:hover {
+        border-radius: 5px;
+        color: $main-color-black;
+        padding: 5px;
+        background: $footer-color-hover-black;
+    }
+    ul {
+        span {
+            color: $color-black;
+            background: $main-color-black;
+        }
+    }
+}
+
+.WhiteThemeFooterContainer {
+    background: white;
+    box-shadow: 0 2px 20px 0 rgb(0 0 0 / 20%);
+    a {
+        color: $color-black;
+        text-decoration: none;
+    }
+    a:visited {
+        color: $color-black;
+    }
+    a:active {
+        color: $color-black;
+    }
+    li:hover {
+        border-radius: 5px;
+        padding: 5px;
+        background: $footer-color-hover-white;
+    }
+    span {
+        color: $color-black;
+        box-shadow: 0 2px 20px 0 rgb(0 0 0 / 20%);
+    }
 }

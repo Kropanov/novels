@@ -15,7 +15,7 @@ import Profile from "./containers/Profile/Profile";
 class App extends Component {
     render() {
         return (
-            <Layout>
+            <Layout blackTheme={this.props.blackTheme}>
                 <ErrorBoundary>
                     <Header/>
                     <Routes>
@@ -27,7 +27,7 @@ class App extends Component {
                         <Route path="users" element={<Authorization/>}/>
                         <Route path="*" element={<h1>404 not found</h1>}/>
                     </Routes>
-                    <Footer/>
+                    <Footer blackTheme={this.props.blackTheme} />
                 </ErrorBoundary>
             </Layout>
         )
@@ -37,7 +37,8 @@ class App extends Component {
 function mapStateToProps(state){
     return {
         novels: state.novels,
+        blackTheme: state.blackTheme,
     }
 }
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps, null)(App);

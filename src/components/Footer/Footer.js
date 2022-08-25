@@ -3,9 +3,16 @@ import classes from './Footer.module.scss'
 import {Link} from "react-router-dom";
 import {NAME_SITE} from "../../сonstants/сonstants";
 
-const Footer = () => {
+const Footer = props => {
+    
+    const cls_foot_cont = [
+        classes.Footer
+    ]
+    
+    props.blackTheme ? cls_foot_cont.push(classes.BlackThemeFooterContainer) : cls_foot_cont.push(classes.WhiteThemeFooterContainer)
+    
     return (
-        <footer className={classes.Footer}>
+        <footer className={cls_foot_cont.join(" ")}>
             <div className="container-fluid !direction !spacing">
                 <div className="row">
                     <div className="col-xl-3 col-md-6 col-sm-12">
@@ -41,7 +48,6 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            {/* TODO copyright footer like separate container right here */}
         </footer>
     )
 }

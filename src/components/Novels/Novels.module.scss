@@ -1,11 +1,9 @@
-$background-color-black1: #212529;
+$background-color-theme-black: #212529;
 
 .Novels {
     margin: 20px 10px 40px 10px;
-    border: 1px solid #1c1f23;
-    padding: 10px;
+    padding: 5px;
     border-radius: 5px;
-    background: $background-color-black1;
 }
 
 .NovelsFlex {
@@ -25,4 +23,14 @@ $background-color-black1: #212529;
     a:active {
         color: white;
     }
+}
+
+.BlackTheme {
+    border: 1px solid #1c1f23;
+    background: $background-color-theme-black;
+}
+
+.WhiteTheme {
+    background: white;
+    box-shadow: 0 2px 8px 0 rgb(0 0 0 / 20%);
 }

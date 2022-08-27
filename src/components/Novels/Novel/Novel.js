@@ -3,26 +3,33 @@ import classes from './Novel.module.scss'
 import {Outlet, Link} from "react-router-dom";
 
 const Novel = props => {
+    
+    const cls_novel_item = [
+        classes.Novel
+    ]
+    
+    props.blackTheme ? cls_novel_item.push(classes.BlackThemeNovel) : cls_novel_item.push(classes.WhiteThemeNovel)
+    
     if (props.description) {
         return (
-            <div className={classes.Novel}>
-                <img className={classes.Image} src={ props.image } alt='Изображение' width='190px' height='260px' />
-                <div className={classes.Title}>
-                    <Link to={`/novels/${props.name}`}>
-                        <div className={classes.Name}>
-                            { props.name }
+            <Link to={`/novels/${props.name}`}>
+                <div className={cls_novel_item.join(" ")}>
+                    <img className={classes.Image} src={ props.image } alt='Изображение' width='190px' height='260px' />
+                    <div className={classes.Title}>
+                            <div className={classes.Name}>
+                                { props.name }
+                            </div>
+                        <div className={classes.Author}>
+                            Автор: { props.author }
                         </div>
-                    </Link>
-                    <div className={classes.Author}>
-                        Автор: { props.author }
+                        <div className={classes.Description}>
+                            {/*<span>Описание:</span>*/}
+                            { props.description }
+                        </div>
                     </div>
-                    <div className={classes.Description}>
-                        {/*<span>Описание:</span>*/}
-                        { props.description }
-                    </div>
+                    <Outlet/>
                 </div>
-                <Outlet/>
-            </div>
+            </Link>
         )
     } else {
         let shortName = ""

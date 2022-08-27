@@ -21,8 +21,7 @@ ul {
     border-bottom: 1px solid rgba(73, 73, 73, 0.7);
     padding: 10px;
     span {
-        border-radius: 3px;
-        padding: 2px 5px 2px 5px;
+        font-weight: 500;
         font-size: 20px;
         text-align: center;
     }
@@ -58,8 +57,7 @@ div.row div {
     }
     ul {
         span {
-            color: $color-black;
-            background: $main-color-black;
+            color: $color-white;
         }
     }
 }
@@ -84,6 +82,5 @@ div.row div {
     }
     span {
         color: $color-black;
-        box-shadow: 0 2px 20px 0 rgb(0 0 0 / 20%);
     }
 }

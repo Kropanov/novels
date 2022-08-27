@@ -12,6 +12,8 @@ const Novels = props => {
         cls.push(classes.NovelsFlex)
     }
     
+    props.blackTheme ? cls.push(classes.BlackTheme) : cls.push(classes.WhiteTheme)
+    
     return (
         <div className={cls.join(" ")}>
             { props.novels.map((novel, index) => {
@@ -19,12 +21,14 @@ const Novels = props => {
                     props.checkingTheArea
                     ?
                         <Novel
+                            blackTheme={props.blackTheme}
                             key={index}
                             image={novel.image}
                             name={novel.name}
                         />
                     :
                         <Novel
+                            blackTheme={props.blackTheme}
                             key={index}
                             image={novel.image}
                             name={novel.name}

@@ -7,26 +7,34 @@ import {RATING_LIMIT_COUNT} from "../../../../сonstants/сonstants";
 
 const RatingSidebarItem = props => {
     
-    const cls = [
+    const cls_rat_num = [
         classes.RatingNumber,
     ]
     
     if (props.count === 1) {
-        cls.push(classes.Gold)
+        cls_rat_num.push(classes.Gold)
     } else if (props.count === 2) {
-        cls.push(classes.Silver)
+        cls_rat_num.push(classes.Silver)
     } else if (props.count === 3) {
-        cls.push(classes.Bronze)
+        cls_rat_num.push(classes.Bronze)
     } else {
-        cls.push(classes.Usual)
+        props.blackTheme ? cls_rat_num.push(classes.BlackThemeRatingNumber) : cls_rat_num.push(classes.WhiteThemeRatingNumber)
     }
+    
+    
+    
+    const cls_item = [
+        classes.itemRatingSideBar,
+    ]
+    
+    props.blackTheme ? cls_item.push(classes.BlackTheme) : cls_item.push(classes.WhiteTheme)
     
     if (props.count <= RATING_LIMIT_COUNT) {
         return (
             <Auxiliary>
                 <Link to={`/novels/${props.name}`}>
-                    <div className={classes.itemRatingSideBar}>
-                        <div className={cls.join(' ')}>
+                    <div className={cls_item.join(" ")}>
+                        <div className={cls_rat_num.join(" ")}>
                             #{props.count}
                         </div>
                         <img className={classes.Image} src={ props.image } alt='Изображение' width='94px' height='94px' />

@@ -12,6 +12,7 @@ const RatingSidebar = props => {
             { novels.map( (novel, index) => {
                 return (
                     <RatingSidebarItem
+                        blackTheme={props.blackTheme}
                         key={index}
                         image={novel.image}
                         name={novel.name}

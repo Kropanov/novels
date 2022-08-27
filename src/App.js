@@ -19,7 +19,7 @@ class App extends Component {
                 <ErrorBoundary>
                     <Header/>
                     <Routes>
-                        <Route index element={<Main novels={this.props.novels}/>} />
+                        <Route index element={<Main novels={this.props.novels} blackTheme={this.props.blackTheme} />} />
                         <Route path="novels" element={<Novells/>}/>
                         <Route path="/novels/:name" element={<NovelPage novels={this.props.novels}/>}/>
                         <Route path="profile" element={<Profile />}/>

@@ -42,10 +42,13 @@ const Novel = props => {
             }
             shortName += "..."
         }
-
+        
+        const cls_novells = [classes.NovelFromNovells]
+        props.blackTheme ? cls_novells.push(classes.BlackThemeNovells) : cls_novells.push(classes.WhiteThemeNovells)
+    
         return (
             <Link to={`/novels/${props.name}`}>
-                <div style={{backgroundImage: `url(${props.image})`}} className={classes.NovelFromNovells}>
+                <div style={{backgroundImage: `url(${props.image})`}} className={cls_novells.join(" ")}>
                     <div className={classes.Name}>
                         {shortName}
                     </div>

@@ -82,7 +82,6 @@ $color-black: black;
 }
 
 .NovelFromNovells {
-    box-shadow: 3px 3px 2px 2px rgba(1, 2, 3, 0.27);
     height: 200px;
     width: 150px;
     background-size: cover;
@@ -97,3 +96,10 @@ $color-black: black;
     }
 }
 
+.BlackThemeNovells {
+    box-shadow: 3px 3px 2px 2px rgba(1, 2, 3, 0.27);
+}
+
+.WhiteThemeNovells {
+    box-shadow: 0 6px 10px 0 rgb(0 0 0 / 70%);
+}

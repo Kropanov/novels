@@ -1,6 +1,16 @@
-.Tab {
-    color: rgba(255, 255, 255, 0.8);
+$color-black: rgba(0, 0, 0, .8);
+$color-white: rgba(255, 255, 255, 0.8);
+
+.TabBlackTheme {
+    color: $color-white;
     &:hover {
-        color: rgba(255, 255, 255, 0.8);
+        color: $color-white;
+    }
+}
+
+.TabWhiteTheme {
+    color: $color-black;
+    &:hover {
+        color: $color-black;
     }
 }

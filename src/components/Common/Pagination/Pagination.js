@@ -3,7 +3,7 @@ import classes from './Pagination.module.scss'
 import {Tab, Tabs} from "react-bootstrap"
 import Settings from "../../Settings/Settings";
 
-const Pagination = () => {
+const Pagination = props => {
     const [key, setKey] = useState('home');
     
     return (
@@ -14,21 +14,21 @@ const Pagination = () => {
             className="mb-3"
         >
             <Tab
-                tabClassName={classes.Tab}
+                tabClassName={props.blackTheme ? classes.TabBlackTheme : classes.TabWhiteTheme}
                 eventKey="home"
                 title="Закладки"
             >
                 1
             </Tab>
             <Tab
-                tabClassName={classes.Tab}
+                tabClassName={props.blackTheme ? classes.TabBlackTheme : classes.TabWhiteTheme}
                 eventKey="profile"
                 title="Библиотека"
             >
                 2
             </Tab>
             <Tab
-                tabClassName={classes.Tab}
+                tabClassName={props.blackTheme ? classes.TabBlackTheme : classes.TabWhiteTheme}
                 eventKey="contact"
                 title="Настройки"
             >

@@ -1,6 +1,6 @@
-$main-color2: rgba(255, 255, 255, 0.8);
-//$border-color-grey: rgb(74, 87, 94);
-$background-color: #1c1f23;
+$white-color: rgba(255, 255, 255, 0.8);
+$black-color: rgba(0, 0, 0, .8);
+$background-color-black-theme: #1c1f23;
 
 
 .Authorization {
@@ -13,17 +13,30 @@ $background-color: #1c1f23;
 }
 
 .AuthContainer {
-    background: $background-color;
     margin: 100px auto;
     width: 400px;
     height: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid black;
     border-radius: 7px;
+}
+
+.BlackTheme {
+    background: $background-color-black-theme;
+    border: 1px solid black;
     h1 {
-        color: $main-color2;
+        color: $white-color;
+        align-items: center;
+        margin-top: 20px;
+    }
+}
+
+.WhiteTheme {
+    background: $white-color;
+    box-shadow: 0 2px 8px 0 rgb(0 0 0 / 20%);
+    h1 {
+        color: $black-color;
         align-items: center;
         margin-top: 20px;
     }

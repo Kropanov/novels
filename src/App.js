@@ -21,7 +21,7 @@ class App extends Component {
                     <Routes>
                         <Route index element={<Main novels={this.props.novels} blackTheme={this.props.blackTheme} />} />
                         <Route path="novels" element={<Novells blackTheme={this.props.blackTheme} />}/>
-                        <Route path="/novels/:name" element={<NovelPage novels={this.props.novels}/>}/>
+                        <Route path="/novels/:name" element={<NovelPage novels={this.props.novels} blackTheme={this.props.blackTheme} />}/>
                         <Route path="profile" element={<Profile blackTheme={this.props.blackTheme} />}/>
                         <Route path="blog" element={<Blog blackTheme={this.props.blackTheme} />}/>
                         <Route path="users" element={<Authorization blackTheme={this.props.blackTheme}/>}/>

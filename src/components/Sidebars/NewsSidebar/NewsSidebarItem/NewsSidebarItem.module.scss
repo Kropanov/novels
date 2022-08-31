@@ -1,5 +1,7 @@
-$main-color1: #fd7e14;
-$background-color-black1-hover: rgba(159, 160, 162, 0.07);
+$main-color: #fd7e14;
+$black-color: black;
+$background-color-black-hover: rgba(159, 160, 162, 0.07);
+$background-color-white-hover: rgba(159, 160, 162, 0.18);
 
 .NewsSidebarItem {
     margin: auto;
@@ -8,9 +10,19 @@ $background-color-black1-hover: rgba(159, 160, 162, 0.07);
     display: flex;
     justify-content: center;
     cursor: pointer;
-    transition: all .19s ease-in-out;
+    transition: all .05s ease-in-out;
+}
+
+.BlackTheme {
     &:hover {
-        color: $main-color1;
-        background: $background-color-black1-hover;
+        color: $main-color;
+        background: $background-color-black-hover;
+    }
+}
+
+.WhiteTheme {
+    &:hover {
+        color: $black-color;
+        background: $background-color-white-hover;
     }
 }

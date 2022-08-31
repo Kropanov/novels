@@ -11,6 +11,8 @@ const DropdownSearchList = props => {
         "position-absolute bottom-20 start-50 translate-middle-x",
     ]
     
+    props.blackTheme ? cls.push(classes.BlackTheme) : cls.push(classes.WhiteTheme)
+    
     const valueLowerCase = props.value.toLowerCase()
     let check = false // did value found
     
@@ -26,6 +28,7 @@ const DropdownSearchList = props => {
                         check = true
                         return (
                             <DropdownSearchListItem
+                                blackTheme={props.blackTheme}
                                 key={index}
                                 image={novella.image}
                                 name={novella.name}

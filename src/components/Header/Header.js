@@ -27,9 +27,9 @@ function Header(props) {
                 </MediaQuery>
                 <Navigation blackTheme={blackTheme} />
             </div>
-            { searchBoxStatus && searchBoxValue !== ''
-                ? <DropdownSearchList />
-                : null
+            { searchBoxStatus && searchBoxValue !== '' && (
+                    <DropdownSearchList blackTheme={blackTheme} />
+                )
             }
         </header>
     )

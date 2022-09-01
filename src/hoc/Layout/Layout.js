@@ -1,21 +1,32 @@
-import React, { Component } from "react";
+import React, {  useEffect } from "react";
 import classes from './Layout.module.scss'
 
-class Layout extends Component {
-    render() {
+function Layout(props) {
     
-        const cls = [
-            classes.Layout
-        ]
+    useEffect(() => {
+        if (props.blackTheme) {
+            document.body.classList.add('blackTheme')
+        } else {
+            document.body.classList.add('whiteTheme')
+        }
+        return () => {
+            document.body.classList.remove('blackTheme')
+            document.body.classList.remove('whiteTheme')
+        }
+    }, [props.blackTheme])
     
-        this.props.blackTheme ? cls.push(classes.BlackTheme) : cls.push(classes.WhiteTheme)
     
-        return (
-            <div className={cls.join(" ")}>
-                {this.props.children}
-            </div>
-        )
-    }
+    const cls = [
+        classes.Layout
+    ]
+
+   props.blackTheme ? cls.push(classes.BlackTheme) : cls.push(classes.WhiteTheme)
+
+    return (
+        <div className={cls.join(" ")}>
+            {props.children}
+        </div>
+    )
 }
 
 export default Layout

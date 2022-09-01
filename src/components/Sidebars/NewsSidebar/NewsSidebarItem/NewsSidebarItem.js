@@ -7,9 +7,16 @@ import {
 } from "../../../../redux/actions/actions";
 
 const NewsSidebarItem = props => {
+    
+    const cls = [
+        classes.NewsSidebarItem
+    ]
+    
+    props.blackTheme ? cls.push(classes.BlackTheme) : cls.push(classes.WhiteTheme)
+    
     return (
         <Link to="/blog" onClick={() => props.onChangeBlogId(props.id)}>
-            <div className={classes.NewsSidebarItem}>
+            <div className={cls.join(" ")}>
                 {props.title}
             </div>
         </Link>

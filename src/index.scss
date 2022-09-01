@@ -1,11 +1,10 @@
 @import "~bootstrap/scss/bootstrap";
 
-:root {
-  --scrollbarBgColor: rgb(52, 58, 64, 0.1);
-  --scrollbarThumbColor: #565555;
-  --scrollbarWidth: 10px;
-  --scrollbarBorderRadius: calc(var(--scrollbarWidth) / 4);
-}
+$scrollbarBgColor: rgb(56 62 68);
+$scrollbarThumbColor: hsl(0deg 0% 67%);
+$scrollbarWidth: 10px;
+$scrollbarBorderRadius: calc(var(--scrollbarWidth) / 4);
+$whiteColor: white;
 
 html {
   scroll-behavior: smooth;
@@ -18,7 +17,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgba(52, 58, 64, 0.98);
 }
 
 code {
@@ -26,15 +24,28 @@ code {
     monospace;
 }
 
-body::-webkit-scrollbar {
-  width: var(--scrollbarWidth);
+body.blackTheme::-webkit-scrollbar {
+  width: $scrollbarWidth;
 }
 
-body::-webkit-scrollbar-track {
-  background: var(--scrollbarBgColor);
-  border-radius: var(--scrollbarBorderRadius);
+body.blackTheme::-webkit-scrollbar-track {
+  background: $scrollbarBgColor;
+  border-radius: $scrollbarBorderRadius;
 }
-body::-webkit-scrollbar-thumb {
-  background-color: var(--scrollbarThumbColor);
+body.blackTheme::-webkit-scrollbar-thumb {
+  background-color: $scrollbarThumbColor;
+  border-radius: 16px;
+}
+
+body.whiteTheme::-webkit-scrollbar {
+  width: $scrollbarWidth;
+}
+
+body.whiteTheme::-webkit-scrollbar-track {
+  background: $whiteColor;
+  border-radius: $scrollbarBorderRadius;
+}
+body.whiteTheme::-webkit-scrollbar-thumb {
+  background-color: $scrollbarThumbColor;
   border-radius: 16px;
 }

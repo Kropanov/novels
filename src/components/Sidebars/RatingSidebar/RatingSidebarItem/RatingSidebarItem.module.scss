@@ -1,8 +1,9 @@
 $main-color1: #fd7e14;
-$main-color2: rgba(255, 255, 255, 0.8);
+$color-white: rgba(255, 255, 255, 0.8);
 $main-color-gold: #ffc107;
 $background-color-black1: #212529;
 $border-color-grey: rgb(74, 87, 94);
+$color-black: rgba(0, 0, 0, 0.87);
 
 .Title {
     display: flex;
@@ -15,16 +16,27 @@ $border-color-grey: rgb(74, 87, 94);
     padding: 10px;
     display: flex;
     flex-flow: row wrap;
-    color: $main-color2;
     font-size: 16px;
     align-items: center;
-    border: 1px solid $border-color-grey;
     border-radius: 10px;
     justify-content: space-around;
     margin-bottom: 15px;
     transition: all .22s ease-in-out;
+}
+
+.BlackTheme {
+    color: $color-white;
+    border: 1px solid $border-color-grey;
     &:hover {
         box-shadow: 0 0 5px 2px #545557;
+    }
+}
+
+.WhiteTheme {
+    color: $color-black;
+    box-shadow: 2px 2px 8px 2px rgb(0 0 0 / 20%);
+    &:hover {
+        box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.49);
     }
 }
 
@@ -37,16 +49,19 @@ $border-color-grey: rgb(74, 87, 94);
 
 .Name, .Author, .Rating {
     transition: color .22s ease-in-out;
-    &:hover {
-        color: $main-color1;
-        cursor: pointer;
-    }
 }
 
 .RatingNumber {
-    color: $main-color2;
     font-size: 2em;
     padding: 10px;
+}
+
+.BlackThemeRatingNumber {
+    color: $color-white;
+}
+
+.WhiteThemeRatingNumber {
+    color: rgba(0, 0, 0, 0.69);
 }
 
 .Gold {
@@ -61,6 +76,3 @@ $border-color-grey: rgb(74, 87, 94);
     color: $main-color1;
 }
 
-.Usual {
-    color: $main-color2;
-}

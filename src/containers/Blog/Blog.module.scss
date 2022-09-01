@@ -1,31 +1,60 @@
-$main-color1: #fd7e14;
-$main-color2: rgba(255, 255, 255, 0.8);
+$main-color-black-theme: #fd7e14;
+$color-white: rgba(255, 255, 255, 0.8);
+$color-black: rgb(0, 0, 0, 0.8);
+$color-hover-white-theme: rgba(150, 150, 150, 0.34);
 
 .tabContent {
     margin-top: 3.4em;
-    color: #AAAAAA;
     font-size: 18px;
     margin-bottom: 3em;
 }
 
+.BlackThemeTab {
+    color: #AAAAAA;
+}
+
+.WhiteThemeTab {
+    color: $color-black;
+}
+
 .navItem {
-    //border: 1px solid rgb(0, 0, 0, 0.4);
     margin-top: 10px;
-    transition: background .33s ease-in-out;
+    transition: background .1s ease-in-out;
     border-radius: 0.25rem;
+}
+
+.BlackTheme {
     a {
         cursor: pointer;
-        color: $main-color2;
+        color: $color-white;
         text-decoration: none;
     }
     a:visited {
-        color: $main-color2;
+        color: $color-white;
     }
     a:active {
-        color: $main-color2;
+        color: $color-white;
     }
     a:hover {
-        color: $main-color1;
+        color: $main-color-black-theme;
         background: rgb(0, 0, 0, 0.1);
+    }
+}
+
+.WhiteTheme {
+    a {
+        cursor: pointer;
+        color: $color-black;
+        text-decoration: none;
+    }
+    a:visited {
+        color: $color-black;
+    }
+    a:active {
+        color: $color-black;
+    }
+    a:hover {
+        color: $color-black;
+        background: $color-hover-white-theme;
     }
 }

@@ -8,10 +8,16 @@ class Main extends Component {
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-xl-9 col-sm-12">
-                        <Novels novels={this.props.novels} />
+                        <Novels
+                            novels={this.props.novels}
+                            blackTheme={this.props.blackTheme}
+                        />
                     </div>
                     <div className="col-xl-3 col-sm-12">
-                        <RatingSidebar novels={this.props.novels} />
+                        <RatingSidebar
+                            novels={this.props.novels}
+                            blackTheme={this.props.blackTheme}
+                        />
                     </div>
                 </div>
             </div>

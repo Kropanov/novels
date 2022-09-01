@@ -1,5 +1,4 @@
 .Logo {
-    color: white;
     font-size: 2em;
     font-style: italic;
     cursor: pointer;
@@ -16,6 +15,15 @@
     a:active {
         color: white;
     }
+}
+
+.BlackTheme {
+    color: white;
+}
+
+.WhiteTheme {
+    color: rgba(0, 0, 0, 0.88);
+    font-weight: 600;
 }
 
 a {

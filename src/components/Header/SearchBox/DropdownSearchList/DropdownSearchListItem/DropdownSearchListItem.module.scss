@@ -1,8 +1,9 @@
 $background-color-hover: rgba(84, 85, 87, 0.39);
+$black-color: rgb(0, 0, 0, .9);
+$white-color: rgba(255, 255, 255, 0.83);
 
 .DropdownSearchListItem {
     display: flex;
-    color: white;
     margin-bottom: 5px;
     align-items: center;
     padding: 10px;
@@ -19,8 +20,16 @@ img {
 }
 
 .Name {
+    font-weight: 600;
     margin-left: 7px;
     display: flex;
     flex-wrap: wrap;
 }
 
+.BlackTheme {
+    color: $white-color;
+}
+
+.WhiteTheme {
+    color: $black-color;
+}

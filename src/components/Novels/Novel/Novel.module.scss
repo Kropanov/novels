@@ -1,20 +1,16 @@
-$main-color1: #fd7e14;
-$main-color2: rgba(255, 255, 255, 0.8);
-$text-color-novels: #AAAAAA;
+$main-color-black-theme: #fd7e14;
+$main-color-white-theme: rgba(255, 255, 255, 0.8);
+$text-color-white: #AAAAAA;
+$color-black: black;
 
 .Novel {
-    border: 2px solid $main-color1;
     //box-shadow: 0 0 3px 3px #545557;
     font-size: 20px;
-    color: $text-color-novels;
     margin: 20px 20px;
     border-radius: 10px;
     padding: 10px;
     display: flex;
     transition: box-shadow .15s ease-in;
-    &:hover {
-        box-shadow: 0 0 5px 4px #545557;
-    }
     .Title {
         display: flex;
         flex-flow: column wrap;
@@ -23,12 +19,52 @@ $text-color-novels: #AAAAAA;
     .Name {
         font-size: 1.3em;
         margin-bottom: 10px;
-        color: $main-color2;
         margin-top: -10px;
         transition: color .22s ease-in-out;
+    }
+    .Author {
+        font-size: .8em;
+        transition: color .22s ease-in-out;
+    }
+}
+
+.BlackThemeNovel {
+    border: 2px solid $main-color-black-theme;
+    color: $text-color-white;
+    &:hover {
+        box-shadow: 0 0 5px 4px #545557;
+    }
+    .Name {
+        color: $main-color-white-theme;
         &:hover {
-            color: $main-color1;
-            cursor: pointer;
+            color: $main-color-black-theme;
+        }
+    }
+    .Author {
+        color: $main-color-white-theme;
+        &:hover {
+            color: $main-color-black-theme;
+        }
+    }
+}
+
+.WhiteThemeNovel {
+    background: white;
+    color: $color-black;
+    box-shadow: 0 2px 8px 0 rgb(0 0 0 / 20%);
+    &:hover {
+        box-shadow: 0 0 5px 4px rgba(84, 85, 87, 0.32);
+    }
+    .Name {
+        color: $color-black;
+        &:hover {
+            color: rgba(0, 0, 0, 0.62);
+        }
+    }
+    .Author {
+        color: $color-black;
+        &:hover {
+            color: rgba(0, 0, 0, 0.62);
         }
     }
 }
@@ -38,14 +74,6 @@ $text-color-novels: #AAAAAA;
     box-sizing: border-box;
 }
 
-.Author {
-    font-size: .8em;
-    transition: color .22s ease-in-out;
-    &:hover {
-        color: $main-color1;
-        cursor: pointer;
-    }
-}
 
 .Description {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
@@ -54,7 +82,6 @@ $text-color-novels: #AAAAAA;
 }
 
 .NovelFromNovells {
-    box-shadow: 3px 3px 2px 2px rgba(1, 2, 3, 0.27);
     height: 200px;
     width: 150px;
     background-size: cover;
@@ -67,4 +94,12 @@ $text-color-novels: #AAAAAA;
         text-shadow: 1px 2px 1px rgb(1, 2, 3);
         margin: 0 0 5px 5px;
     }
+}
+
+.BlackThemeNovells {
+    box-shadow: 3px 3px 2px 2px rgba(1, 2, 3, 0.27);
+}
+
+.WhiteThemeNovells {
+    box-shadow: 0 6px 14px 0 rgb(0 0 0 / 55%);
 }

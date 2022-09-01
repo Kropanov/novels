@@ -12,13 +12,23 @@ const Drawer = props => {
         classes.Drawer,
     ]
     
+    const cls_logo = [
+        classes.DrawerLogo
+    ]
+    
     if (props.menu) {
         cls.push(classes.showDrawer)
     }
     
+    props.blackTheme ? cls.push(classes.BlackTheme) : cls.push(classes.WhiteTheme)
+    
+    if (!props.blackTheme) {
+        cls_logo.push(classes.DrawerLogoWhiteTheme)
+    }
+    
     return (
         <div className={cls.join(" ")}>
-            <div className={classes.DrawerLogo}>
+            <div className={cls_logo.join(" ")}>
                 <img src={logo} alt="logo" width="24" height="24"/>
                 <span>{NAME_SITE}</span>
             </div>

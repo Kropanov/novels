@@ -7,9 +7,12 @@ const SearchBox = props => {
     
     const cls = [
         "form-control",
-        classes.SearchBox
     ]
 
+    if (props.blackTheme) {
+        cls.push(classes.BlackTheme)
+    }
+    
     return (
         <div className="col-xl-2 col-md-6 col-sm-5">
             <input

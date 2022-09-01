@@ -1,10 +1,17 @@
 import React from 'react'
 import classes from './FilterSearchSidebar.module.scss'
+import Button from 'react-bootstrap/Button';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
 
-const FilterSearchSidebar = () => {
+const FilterSearchSidebar = (props) => {
     // TODO: It will be necessary to make separate components for Label, Input and Select in order to optimize the code
+    
+    const cls = [classes.FilterSearchSidebar]
+    
+    props.blackTheme ? cls.push(classes.BlackTheme) : cls.push(classes.WhiteTheme)
+    
     return (
-        <div className={classes.FilterSearchSidebar}>
+        <div className={cls.join(" ")}>
             <div className="input-group mb-2">
                 <label className={`input-group-text ${classes.Label}`} htmlFor="inputGroupSelect01">Жанры</label>
                 <select  defaultValue="1" className={`form-select ${classes.SelectInput}`} id="inputGroupSelect01">
@@ -58,10 +65,10 @@ const FilterSearchSidebar = () => {
                     <span style={{marginLeft: 5}}>Заброшен</span>
                 </div>
             </div>
-            <div className="btn-group mt-2" role="group" aria-label="Basic outlined example">
-                <button type="button" className="btn btn-outline-primary">Сбросить</button>
-                <button type="button" className="btn btn-outline-primary">Показать</button>
-            </div>
+            <ButtonGroup aria-label="Basic example" className="pt-2">
+                <Button variant={props.blackTheme ? "dark" : "primary"}>Сбросить</Button>
+                <Button variant={props.blackTheme ? "dark" : "primary"}>Показать</Button>
+            </ButtonGroup>
         </div>
     )
 }

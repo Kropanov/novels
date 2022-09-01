@@ -1,5 +1,7 @@
 $main-dark-background-color: #1c1f23;
 $main-gray-text-color: rgb(108 117 125);
+$white-color: white;
+$black-color: rgb(0, 0, 0, .8);
 
 @mixin color($color, $bgColor) {
     color: $color;
@@ -13,15 +15,28 @@ $main-gray-text-color: rgb(108 117 125);
     flex-direction: column;
     border-radius: 5px;
     padding: 15px;
-    background: $main-dark-background-color;
     margin: 20px;
 }
 
-.Label, .SelectInput {
-    @include color($main-gray-text-color, $main-dark-background-color);
+.BlackTheme {
+    background: $main-dark-background-color;
+    .Label, .SelectInput {
+        @include color($main-gray-text-color, $main-dark-background-color);
+    }
+    .FilterSearchTitle {
+        color: $white-color;
+        margin-top: 5px;
+    }
 }
 
-.FilterSearchTitle {
-    color: white;
-    margin-top: 5px;
+.WhiteTheme {
+    background: white;
+    box-shadow: 0 2px 8px 0 rgb(0 0 0 / 20%);
+    .Label, .SelectInput {
+        @include color($black-color, $white-color);
+    }
+    .FilterSearchTitle {
+        color: $black-color;
+        margin-top: 5px;
+    }
 }

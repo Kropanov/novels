@@ -1,29 +1,43 @@
 $background-color-black1: #212529;
-$main-color2: rgba(255, 255, 255, 0.9);
+$white-color: rgba(255, 255, 255, 0.9);
+$black-color: rgba(0, 0, 0, 0.8);
 $border-color-grey: rgb(74, 87, 94);
 $main-color1: #fd7e14;
 
 .NewsSidebar {
-    margin: 30px 25px 40px 0;
-    color: $main-color2;
+    margin: 30px 45px 40px -20px;
     border-radius: 10px;
     border: 1px solid $border-color-grey;
     div:nth-child(-n+6) {
         border-top: 1px solid $border-color-grey;
     }
+}
+
+.BlackThemeNewsSidebar {
+    color: $white-color;
     a {
-        cursor: pointer;
-        color: $main-color2;
+        color: $white-color;
         text-decoration: none;
     }
     a:visited {
-        color: $main-color2;
+        color: $white-color;
     }
     a:active {
-        color: $main-color2;
+        color: $white-color;
     }
-    a:hover {
-        color: $main-color1;
+}
+
+.WhiteThemeNewsSidebar {
+    color: $black-color;
+    a {
+        color: $black-color;
+        text-decoration: none;
+    }
+    a:visited {
+        color: $black-color;
+    }
+    a:active {
+        color: $black-color;
     }
 }
 

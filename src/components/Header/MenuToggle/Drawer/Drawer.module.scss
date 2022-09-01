@@ -1,5 +1,9 @@
-$main-color1: #fd7e14;
-$background-color-drawer: #1e2023;
+$black-theme-color: #fd7e14;
+$background-color-black: #1e2023;
+$background-color-white: rgba(150, 150, 150, 0.34);
+$color-white: rgba(255, 255, 255, 0.8);
+$color-black: rgba(0, 0, 0, 0.87);
+
 
 .Drawer {
     transition: transform .22s ease-in;
@@ -8,7 +12,6 @@ $background-color-drawer: #1e2023;
     right: 0;
     top: 0;
     bottom: 0;
-    background: $background-color-drawer;
     display: flex;
     flex-flow: column wrap;
     width: 300px;
@@ -17,25 +20,13 @@ $background-color-drawer: #1e2023;
     transform: translateZ(0) translateX(320px);
     a {
         font-size: 18px;
-        color: rgba(255, 255, 255, 0.8);;
         text-decoration: none;
         padding: 10px 30px;
         width: 180px;
         position: relative;
         text-align: center;
     }
-    a:visited {
-        color: rgba(255, 255, 255, 0.8);;
-    }
-    a:active {
-        color: rgba(255, 255, 255, 0.8);;
-    }
-    a:hover {
-        color: $main-color1;
-        background: rgba(159, 160, 162, 0.07);
-    }
     span {
-        color: rgba(255, 255, 255, 0.8);;
         font-size: 2em;
         font-style: italic;
         cursor: pointer;
@@ -53,4 +44,47 @@ $background-color-drawer: #1e2023;
     span {
         margin-left: 5px;
     }
+}
+
+.BlackTheme {
+    background: $background-color-black;
+    a {
+        color: $color-white;
+    }
+    a:visited {
+        color: $color-white;
+    }
+    a:active {
+        color: $color-white;
+    }
+    a:hover {
+        color: $black-theme-color;
+        background: rgba(159, 160, 162, 0.07);
+    }
+    span {
+        color: $color-white;
+    }
+}
+
+.WhiteTheme {
+    background: #ffffff;
+    a {
+        color: $color-black;
+    }
+    a:visited {
+        color: $color-black;
+    }
+    a:active {
+        color: $color-black;
+    }
+    a:hover {
+        background: $background-color-white;
+    }
+    span {
+        color: $color-black;
+    }
+}
+
+.DrawerLogoWhiteTheme {
+    font-weight: 600;
 }

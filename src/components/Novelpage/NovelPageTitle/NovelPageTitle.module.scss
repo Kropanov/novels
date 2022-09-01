@@ -1,6 +1,9 @@
  $font-color-dark-theme: #AAAAAA;
- $main-color1: #fd7e14;
- $main-color2: rgba(255, 255, 255, 0.8);
+ $main-color-black-theme: #fd7e14;
+ $white-color: rgba(255, 255, 255, 0.8);
+ $black-color: rgba(0, 0, 0, 0.87);
+ $background-color-white-hover: rgba(150, 150, 150, 0.34);
+
 
  .colMain {
      padding: 50px;
@@ -15,6 +18,13 @@
      flex-flow: column wrap;
  }
 
+ 
+ .WhiteThemeInfo {
+     div {
+         color: $black-color;
+     }
+ }
+
  .Description {
      display: flex;
      font-size: 18px;
@@ -25,7 +35,7 @@
  .Name {
      font-size: 2em;
      margin-bottom: 5px;
-     color: $main-color1;
+     color: $main-color-black-theme;
  }
  
  .Image {
@@ -33,29 +43,18 @@
      box-sizing: border-box;
      display: flex;
      flex-flow: column nowrap;
+     img {
+         margin-bottom: 5px;
+     }
  }
  
  .Author {
      font-size: 17px;
      margin-bottom: 5px;
-     color: $main-color2;
+     color: $white-color;
  }
  
  .Feedback {
      margin-bottom: 10px;
  }
  
- .Btn {
-     font-size: 18px;
-     margin-top: 6px;
-     padding: 8px;
-     background: #363c42;
-     border: 1px solid $main-color1;
-     border-radius: 6px;
-     color: $main-color2;
-     transition: all 0.21s ease-in;
-     &:hover {
-         background: $main-color1;
-         color: black;
-     }
- }

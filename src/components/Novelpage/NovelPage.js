@@ -12,6 +12,7 @@ const NovelPage = props => {
             { props.novels.map((novel, index) => {
                 return ( name === novel.name ?
                         <NovelPageTitle
+                            blackTheme={props.blackTheme}
                             key={index}
                             image={novel.image}
                             name={novel.name}

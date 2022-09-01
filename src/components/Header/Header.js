@@ -9,23 +9,27 @@ import {connect} from "react-redux";
 
 function Header(props) {
     
+    const {searchBoxStatus, searchBoxValue, blackTheme} = props;
+    
     const cls = [
         "row",
         classes.Header,
     ]
     
+    blackTheme ? cls.push(classes.BlackTheme) : cls.push(classes.WhiteTheme)
+    
     return (
         <header className="container-fluid position-relative">
             <div className={cls.join(" ")}>
                 <MediaQuery query="(min-width: 576px)">
-                    <Logo />
-                    <SearchBox/>
+                    <Logo blackTheme={blackTheme} />
+                    <SearchBox blackTheme={blackTheme} />
                 </MediaQuery>
-                <Navigation />
+                <Navigation blackTheme={blackTheme} />
             </div>
-            { props.searchBoxStatus && props.searchBoxValue !== ''
-                ? <DropdownSearchList />
-                : null
+            { searchBoxStatus && searchBoxValue !== '' && (
+                    <DropdownSearchList blackTheme={blackTheme} />
+                )
             }
         </header>
     )
@@ -33,6 +37,7 @@ function Header(props) {
 
 function mapStateToProps(state) {
     return {
+        blackTheme: state.blackTheme,
         searchBoxStatus: state.isSearchBox,
         searchBoxValue: state.searchBoxValue,
     }

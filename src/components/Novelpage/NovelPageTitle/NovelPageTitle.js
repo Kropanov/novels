@@ -1,10 +1,14 @@
 import React, {useEffect} from 'react'
 import classes from './NovelPageTitle.module.scss'
-// import RatingSidebar from "../../Sidebars/RatingSidebar/RatingSidebar"
 import NewsSidebar from "../../Sidebars/NewsSidebar/NewsSidebar"
 import {scrollPageUp} from "../../../store/functions/functions";
+import {Button} from "react-bootstrap";
 
 const NovelPageTitle = props => {
+    
+    useEffect(() => {
+        scrollPageUp()
+    })
     
     const cls = [
         classes.colMain,
@@ -12,9 +16,13 @@ const NovelPageTitle = props => {
         "col-md-12",
     ]
     
-    useEffect(() => {
-        scrollPageUp()
-    })
+    const cls_info = [
+        classes.MainInfo
+    ]
+    
+    if (!props.blackTheme) {
+        cls_info.push(classes.WhiteThemeInfo)
+    }
     
     return (
         <div className="container-fluid">
@@ -22,10 +30,12 @@ const NovelPageTitle = props => {
                 <div className={cls.join(" ")}>
                     <div className={classes.Image}>
                         <img src={ props.image }  alt='Изображение' width='260px' height='350px' />
-                        <button type="button" className={classes.Btn}>Начать читать</button>
+                        <Button size="lg" variant={props.blackTheme ? "outline-warning" : "outline-primary"}>
+                            Начать читать
+                        </Button>
                     </div>
                     {/* TODO may be relocate this in a new component ?*/}
-                    <div className={classes.MainInfo}>
+                    <div className={cls_info.join(" ")}>
                         <div className={classes.Name}>
                             { props.name }
                         </div>
@@ -36,7 +46,7 @@ const NovelPageTitle = props => {
                             Рейтинг: { props.rating }
                         </div>
                         <div>
-                            Просмотров: { props.views}
+                            Просмотров: { props.views }
                         </div>
                         <div className={classes.Feedback}>
                             <div>
@@ -52,7 +62,7 @@ const NovelPageTitle = props => {
                     </div>
                 </div>
                 <div className="col-xl-3 col-md-12">
-                    <NewsSidebar/>
+                    <NewsSidebar blackTheme={props.blackTheme} />
                 </div>
             </div>
         </div>

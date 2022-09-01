@@ -15,19 +15,19 @@ import Profile from "./containers/Profile/Profile";
 class App extends Component {
     render() {
         return (
-            <Layout>
+            <Layout blackTheme={this.props.blackTheme}>
                 <ErrorBoundary>
                     <Header/>
                     <Routes>
-                        <Route index element={<Main novels={this.props.novels}/>} />
-                        <Route path="novels" element={<Novells/>}/>
-                        <Route path="/novels/:name" element={<NovelPage novels={this.props.novels}/>}/>
-                        <Route path="profile" element={<Profile />}/>
-                        <Route path="blog" element={<Blog />}/>
-                        <Route path="users" element={<Authorization/>}/>
+                        <Route index element={<Main novels={this.props.novels} blackTheme={this.props.blackTheme} />} />
+                        <Route path="novels" element={<Novells blackTheme={this.props.blackTheme} />}/>
+                        <Route path="/novels/:name" element={<NovelPage novels={this.props.novels} blackTheme={this.props.blackTheme} />}/>
+                        <Route path="profile" element={<Profile blackTheme={this.props.blackTheme} />}/>
+                        <Route path="blog" element={<Blog blackTheme={this.props.blackTheme} />}/>
+                        <Route path="users" element={<Authorization blackTheme={this.props.blackTheme}/>}/>
                         <Route path="*" element={<h1>404 not found</h1>}/>
                     </Routes>
-                    <Footer/>
+                    <Footer blackTheme={this.props.blackTheme} />
                 </ErrorBoundary>
             </Layout>
         )
@@ -37,7 +37,8 @@ class App extends Component {
 function mapStateToProps(state){
     return {
         novels: state.novels,
+        blackTheme: state.blackTheme,
     }
 }
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps, null)(App);

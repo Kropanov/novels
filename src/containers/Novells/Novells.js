@@ -9,10 +9,14 @@ class Novells extends Component {
             <div className="container">
                 <div className="row">
                     <div className="d-flex justify-content-center col-9">
-                        <Novels novels={this.props.novels} checkingTheArea={true}/>
+                        <Novels
+                            novels={this.props.novels}
+                            checkingTheArea={true}
+                            blackTheme={this.props.blackTheme}
+                        />
                     </div>
                     <div className="d-flex justify-content-center col-3">
-                        <FilterSearchSidebar/>
+                        <FilterSearchSidebar blackTheme={this.props.blackTheme} />
                     </div>
                 </div>
             </div>

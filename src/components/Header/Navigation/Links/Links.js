@@ -1,5 +1,4 @@
 import React from "react"
-import Auxiliary from "../../../../hoc/Auxiliary/Auxiliary";
 import {NavLink} from "react-router-dom";
 import MediaQuery from "react-responsive";
 import './Links.module.scss'
@@ -11,10 +10,11 @@ import {
     DoorOpen,
     Search
 } from 'react-bootstrap-icons';
+import Auxiliary from "../../../../hoc/Auxiliary/Auxiliary";
 
 const Links = () => {
     return (
-        <Auxiliary >
+        <Auxiliary>
             <NavLink to="/">
                 <HouseHeart />
                 Главная

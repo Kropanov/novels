@@ -11,6 +11,7 @@ import Novells from "./containers/Novells/Novells";
 import Blog from "./containers/Blog/Blog";
 import Authorization from "./containers/Authorization/Authorization";
 import Profile from "./containers/Profile/Profile";
+import Chapters from "./components/Chapters/Chapters";
 
 class App extends Component {
     render() {
@@ -22,6 +23,7 @@ class App extends Component {
                         <Route index element={<Main novels={this.props.novels} blackTheme={this.props.blackTheme} />} />
                         <Route path="novels" element={<Novells blackTheme={this.props.blackTheme} />}/>
                         <Route path="/novels/:name" element={<NovelPage novels={this.props.novels} blackTheme={this.props.blackTheme} />}/>
+                        <Route path="/novels/:name/:id" element={<Chapters novels={this.props.novels} blackTheme={this.props.blackTheme} />}/>
                         <Route path="profile" element={<Profile blackTheme={this.props.blackTheme} />}/>
                         <Route path="blog" element={<Blog blackTheme={this.props.blackTheme} />}/>
                         <Route path="users" element={<Authorization blackTheme={this.props.blackTheme}/>}/>

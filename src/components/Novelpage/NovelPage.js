@@ -10,7 +10,7 @@ const NovelPage = props => {
     return (
         <Auxiliary>
             { props.novels.map((novel, index) => {
-                return ( name === novel.name ?
+                return ( name === novel.name &&
                         <NovelPageTitle
                             blackTheme={props.blackTheme}
                             key={index}
@@ -24,7 +24,6 @@ const NovelPage = props => {
                             dislikes={novel.dislikes}
                             novels={props.novels}
                         />
-                        : null
                 )
             })}
         </Auxiliary>

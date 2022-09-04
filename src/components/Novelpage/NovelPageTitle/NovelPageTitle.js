@@ -3,8 +3,12 @@ import classes from './NovelPageTitle.module.scss'
 import NewsSidebar from "../../Sidebars/NewsSidebar/NewsSidebar"
 import {scrollPageUp} from "../../../store/functions/functions";
 import {Button} from "react-bootstrap";
+import {useRouter} from "../../../hooks/Router";
 
 const NovelPageTitle = props => {
+    
+    const router = useRouter()
+    console.log(router)
     
     useEffect(() => {
         scrollPageUp()
@@ -30,7 +34,11 @@ const NovelPageTitle = props => {
                 <div className={cls.join(" ")}>
                     <div className={classes.Image}>
                         <img src={ props.image }  alt='Изображение' width='260px' height='350px' />
-                        <Button size="lg" variant={props.blackTheme ? "outline-warning" : "outline-primary"}>
+                        <Button
+                            size="lg"
+                            variant={props.blackTheme ? "outline-warning" : "outline-primary"}
+                            onClick={() => router.push(`/novels/${props.name}/1`)}
+                        >
                             Начать читать
                         </Button>
                     </div>

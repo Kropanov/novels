@@ -1,27 +1,14 @@
-import React, {useEffect, useState} from 'react'
-import {useRouter} from "../../hooks/Router"
+import React from 'react'
+import ListChapters from "../ListChapters/ListChapters";
+import {useChapters} from "../../hooks/Chapters";
 
 const Chapters = (props) => {
     
-    const {novels} = props
-    const [chapter, setChapter] = useState({})
-    
-    const router = useRouter()
-    
-    const getChapterById = async () => {
-        const novel = novels.find(item => item.name === router.query.name)
-        return novel.chapters.find(item => item.id === +router.query.id)
-    }
-
-    useEffect(() => {
-        (async () => {
-            const chap = await getChapterById();
-            setChapter(chap)
-        })()
-    })
+    const { chapter, chapters } = useChapters(props)
     
     return (
         <>
+            <ListChapters chapters={chapters} />
             {
                 chapter && (
                     <div style={{

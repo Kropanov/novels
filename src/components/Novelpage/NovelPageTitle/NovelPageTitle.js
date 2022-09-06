@@ -8,7 +8,6 @@ import {useRouter} from "../../../hooks/Router";
 const NovelPageTitle = props => {
     
     const router = useRouter()
-    console.log(router)
     
     useEffect(() => {
         scrollPageUp()

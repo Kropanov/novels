@@ -14,7 +14,7 @@ function ListChapters(props) {
                 id="dropdown-button-dark-example2"
                 variant="secondary"
                 menuVariant="dark"
-                title="Dropdown button"
+                title="Список глав"
                 className="mt-2"
             >
                 { chapters.map( (item, index) => (

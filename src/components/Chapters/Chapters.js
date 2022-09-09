@@ -1,8 +1,8 @@
 import React from 'react'
-import ListChapters from "../ListChapters/ListChapters";
 import {useChapters} from "../../hooks/Chapters";
 import {Col, Container, Row} from "react-bootstrap";
 import classes from "./Chapters.module.scss"
+import ChaptersNavigationBar from "./ChaptersNavigationBar/ChaptersNavigationBar";
 
 const Chapters = (props) => {
     
@@ -12,7 +12,7 @@ const Chapters = (props) => {
         <Container className={classes.Container}>
             <Row>
                 <Col>
-                    <ListChapters chapters={chapters} />
+                    <ChaptersNavigationBar chapters={chapters} />
                     <h1>{chapter.title}</h1>
                     <p>{chapter.text}</p>
                 </Col>

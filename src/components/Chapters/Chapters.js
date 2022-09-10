@@ -15,6 +15,7 @@ const Chapters = (props) => {
                     <ChaptersNavigationBar chapters={chapters} />
                     <h1>{chapter.title}</h1>
                     <p>{chapter.text}</p>
+                    <ChaptersNavigationBar chapters={chapters} />
                 </Col>
             </Row>
         </Container>

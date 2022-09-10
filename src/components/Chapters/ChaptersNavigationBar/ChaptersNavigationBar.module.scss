@@ -1,9 +1,9 @@
 .Container {
-     background: rgb(108, 117, 125);
+     background: #212529;
      display: flex;
      align-content: space-between;
      justify-content: space-between;
-     align-items: center;
+     align-items: flex-end;
      margin: 10px 0;
      border-radius: 10px;
 }

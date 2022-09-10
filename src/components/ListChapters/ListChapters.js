@@ -1,4 +1,5 @@
 import React, {useRef} from 'react'
+import Button from 'react-bootstrap/Button'
 import Dropdown from 'react-bootstrap/Dropdown'
 import DropdownButton from 'react-bootstrap/DropdownButton'
 import {useRouter} from "../../hooks/Router";
@@ -16,8 +17,6 @@ function ListChapters(props) {
     }
     
     const handleClickOnArrowRight = () => {
-        console.log(Number(router.query.id) > chapters.length)
-        console.log(Number(router.query.id))
         if (Number(router.query.id) >= chapters.length) {
             return;
         }
@@ -25,8 +24,6 @@ function ListChapters(props) {
     }
     
     const handleClickOnArrowLeft = () => {
-        console.log(Number(router.query.id) < 1)
-        console.log(Number(router.query.id))
         if (Number(router.query.id) < 2) {
             return;
         }
@@ -39,15 +36,16 @@ function ListChapters(props) {
                 className={classes.Arrow}
                 onClick={() => handleClickOnArrowLeft()}
             >
-                <ArrowLeft />
+                <Button variant="dark">
+                    <ArrowLeft />
+                </Button>
             </div>
             <DropdownButton
                 ref={ref}
                 id="dropdown-button-dark-example2"
-                variant="secondary"
+                variant="dark"
                 menuVariant="dark"
                 title="Список глав"
-                className="mt-2"
                 align="start"
             >
                 { chapters.map( (item, index) => (
@@ -63,7 +61,9 @@ function ListChapters(props) {
                 className={classes.Arrow}
                 onClick={() => handleClickOnArrowRight()}
             >
-                <ArrowRight />
+                <Button variant="dark">
+                    <ArrowRight />
+                </Button>
             </div>
         </>
     )

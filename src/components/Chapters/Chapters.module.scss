@@ -1,3 +1,6 @@
+$black-theme-color: #AAAAAA;
+$white-theme-color: rgb(0, 0, 0, .9);
+
 .Container {
     margin: 0 auto;
     padding: 0 15px;
@@ -5,7 +8,15 @@
     max-width: 840px;
     word-break: break-word;
     font-size: 18px;
-    color: #AAAAAA;
     white-space: pre-wrap;
     font-family: Helvetica, serif;
+}
+
+.BlackTheme {
+    color: $black-theme-color;
+    
+}
+
+.WhiteTheme {
+    color: $white-theme-color;
 }

@@ -8,14 +8,20 @@ const Chapters = (props) => {
     
     const { chapter, chapters } = useChapters(props)
     
+    const cls = [
+        classes.Container
+    ]
+    
+    props.blackTheme ? cls.push(classes.BlackTheme) : cls.push(classes.WhiteTheme)
+    
     return (
-        <Container className={classes.Container}>
+        <Container className={cls.join(" ")}>
             <Row>
                 <Col>
-                    <ChaptersNavigationBar chapters={chapters} />
+                    <ChaptersNavigationBar blackTheme={props.blackTheme} chapters={chapters} />
                     <h1>{chapter.title}</h1>
                     <p>{chapter.text}</p>
-                    <ChaptersNavigationBar chapters={chapters} />
+                    <ChaptersNavigationBar blackTheme={props.blackTheme} chapters={chapters} />
                 </Col>
             </Row>
         </Container>

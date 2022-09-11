@@ -1,9 +1,19 @@
+$background-color-black-theme: #212529;
+$background-color-white-theme: #f8f9fa;
+
 .Container {
-     background: #212529;
      display: flex;
      align-content: space-between;
      justify-content: space-between;
      align-items: flex-end;
      margin: 10px 0;
      border-radius: 10px;
+}
+
+.BlackTheme {
+     background: $background-color-black-theme;
+}
+
+.WhiteTheme {
+     background: $background-color-white-theme;
 }

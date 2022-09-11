@@ -8,7 +8,7 @@ import classes from "./ListChapters.module.scss"
 
 function ListChapters(props) {
     
-    const {chapters} = props
+    const {chapters, blackTheme} = props
     const ref = useRef(null);
     const router = useRouter()
     
@@ -36,15 +36,15 @@ function ListChapters(props) {
                 className={classes.Arrow}
                 onClick={() => handleClickOnArrowLeft()}
             >
-                <Button variant="dark">
+                <Button variant={blackTheme ? "dark" : "light"}>
                     <ArrowLeft />
                 </Button>
             </div>
             <DropdownButton
                 ref={ref}
                 id="dropdown-button-dark-example2"
-                variant="dark"
-                menuVariant="dark"
+                variant={blackTheme ? "dark" : "light"}
+                menuVariant={blackTheme ? "dark" : "light"}
                 title="Список глав"
                 align="start"
             >
@@ -61,7 +61,7 @@ function ListChapters(props) {
                 className={classes.Arrow}
                 onClick={() => handleClickOnArrowRight()}
             >
-                <Button variant="dark">
+                <Button variant={blackTheme ? "dark" : "light"}>
                     <ArrowRight />
                 </Button>
             </div>

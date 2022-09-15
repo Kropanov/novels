@@ -7,45 +7,45 @@ $scrollbarBorderRadius: calc(var(--scrollbarWidth) / 4);
 $whiteColor: white;
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
 body.blackTheme::-webkit-scrollbar {
-  width: $scrollbarWidth;
+    width: $scrollbarWidth;
 }
 
 body.blackTheme::-webkit-scrollbar-track {
-  background: $scrollbarBgColor;
-  border-radius: $scrollbarBorderRadius;
+    background: $scrollbarBgColor;
+    border-radius: $scrollbarBorderRadius;
 }
 body.blackTheme::-webkit-scrollbar-thumb {
-  background-color: $scrollbarThumbColor;
-  border-radius: 16px;
+    background-color: $scrollbarThumbColor;
+    border-radius: 16px;
 }
 
 body.whiteTheme::-webkit-scrollbar {
-  width: $scrollbarWidth;
+    width: $scrollbarWidth;
 }
 
 body.whiteTheme::-webkit-scrollbar-track {
-  background: $whiteColor;
-  border-radius: $scrollbarBorderRadius;
+    background: $whiteColor;
+    border-radius: $scrollbarBorderRadius;
 }
 body.whiteTheme::-webkit-scrollbar-thumb {
-  background-color: $scrollbarThumbColor;
-  border-radius: 16px;
+    background-color: $scrollbarThumbColor;
+    border-radius: 16px;
 }

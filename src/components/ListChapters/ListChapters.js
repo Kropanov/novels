@@ -30,7 +30,7 @@ function ListChapters(props) {
             <DropdownButton
                 id="dropdown-button-dark-example2"
                 variant={blackTheme ? "dark" : "light"}
-                menuVariant={blackTheme ? "dark" : "light"}
+                menuVariant={blackTheme ? "dark" : null}
                 title="Список глав"
                 align="start"
             >
@@ -39,7 +39,7 @@ function ListChapters(props) {
                         key={index+1}
                         onClick={() => handleChapterChange(index) }
                     >
-                        {`Глава ${index+1} ${item.title}`}
+                        {item.title}
                     </Dropdown.Item>
                 ) ) }
             </DropdownButton>

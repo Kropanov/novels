@@ -19,7 +19,7 @@ const Chapters = (props) => {
             <Row>
                 <Col>
                     <ChaptersNavigationBar blackTheme={props.blackTheme} chapters={chapters} />
-                    <h1>{chapter.title}</h1>
+                    <h2>{chapter.title}</h2>
                     <p>{chapter.text}</p>
                     <ChaptersNavigationBar blackTheme={props.blackTheme} chapters={chapters} />
                 </Col>

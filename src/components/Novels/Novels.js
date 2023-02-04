@@ -4,6 +4,13 @@ import Novel from "./Novel/Novel";
 
 const Novels = props => {
     
+    // ToDo: For testing api. Don't forget this
+    React.useEffect(() => {
+        fetch("/novels")
+            .then((res) => res.json())
+            .then((data) => console.log(data.message));
+    }, []);
+    
     const cls = [
         classes.Novels,
     ]
